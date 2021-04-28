@@ -29,11 +29,6 @@ const _nav = [
         name: "Add new Product",
         to: "/products/Add-products",
       },
-      {
-        _tag: "CSidebarNavItem",
-        name: "Manage Products",
-        to: "/products/Manage-products",
-      },
     ],
   },
   {
@@ -46,12 +41,6 @@ const _nav = [
         _tag: "CSidebarNavItem",
         name: "All Orders",
         to: "/orders/All-orders",
-      },
-
-      {
-        _tag: "CSidebarNavItem",
-        name: "Manage Orders",
-        to: "/orders/Manage-Orders",
       },
     ],
   },

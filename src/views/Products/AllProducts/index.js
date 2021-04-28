@@ -11,7 +11,7 @@ import {
   CPagination,
 } from "@coreui/react";
 
-import usersData from "../../users/UsersData";
+import usersData from "../ProductsData.json";
 
 const getBadge = (status) => {
   switch (status) {
@@ -35,7 +35,8 @@ export default function Index() {
   const [page, setPage] = useState(currentPage);
 
   const pageChange = (newPage) => {
-    currentPage !== newPage && history.push(`/users?page=${newPage}`);
+    currentPage !== newPage &&
+      history.push(`/products/All-products?page=${newPage}`);
   };
 
   useEffect(() => {
@@ -64,9 +65,11 @@ export default function Index() {
               clickableRows
               onRowClick={(item) => history.push(`/products/${item.id}`)}
               scopedSlots={{
-                status: (item) => (
-                  <td>
-                    <CBadge color={getBadge(item.status)}>{item.status}</CBadge>
+                'product': (item) => (
+                  <td className="w-25">
+                    <div className="w-25">
+                      <img className="w-25" src={item.product}/>
+                    </div>
                   </td>
                 ),
               }}
@@ -74,7 +77,7 @@ export default function Index() {
             <CPagination
               activePage={page}
               onActivePageChange={pageChange}
-              pages={5}
+              pages={Math.round(usersData.length/5)}
               doubleArrows={false}
               align="center"
             />

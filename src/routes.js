@@ -62,11 +62,11 @@ const User = React.lazy(() => import("./views/users/User"));
 // importing Prooducts Components
 const ALLProducts = React.lazy(() => import("./views/Products/AllProducts"));
 const ADDProducts = React.lazy(() => import("./views/Products/AddProducts"));
-const MProducts = React.lazy(() => import("./views/Products/MProducts"));
+
 const TheProduct = React.lazy(() => import("./views/Products/MProducts"));
 //importing Prooducts Components
 const ALLOrders = React.lazy(() => import("./views/Orders/AllOrders"));
-const MOrder = React.lazy(() => import("./views/Orders/MOrders"));
+
 const TheOrder = React.lazy(() => import("./views/Orders/MOrders"));
 
 /// Routes
@@ -142,21 +142,10 @@ const routes = [
     component: ADDProducts,
   },
   {
-    path: "/products/Manage-products",
-    exact: true,
-    name: "Manage products",
-    component: MProducts,
-  },
-  {
     path: "/products/:id",
     exact: true,
     name: "Product Details",
     component: TheProduct,
-  },
-  {
-    path: "/products/Manage-products/:id",
-    name: "Manage products",
-    component: MProducts,
   },
   // ADDing Orders Routes /////////
   {
@@ -164,13 +153,7 @@ const routes = [
     exact: true,
     name: "Orders",
     component: ALLOrders,
-  },
-  {
-    path: "/orders/Manage-Orders",
-    exact: true,
-    name: "Manage Orders",
-    component: MOrder,
-  },
+  }
   // {
   //   path: "/orders/All-orders/:id",
   //   exact: true,
