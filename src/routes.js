@@ -67,7 +67,7 @@ const TheProduct = React.lazy(() => import("./views/Products/MProducts"));
 //importing Prooducts Components
 const ALLOrders = React.lazy(() => import("./views/Orders/AllOrders"));
 
-const TheOrder = React.lazy(() => import("./views/Orders/MOrders"));
+// const TheOrder = React.lazy(() => import("./views/Orders/MOrders"));
 
 /// Routes
 const routes = [

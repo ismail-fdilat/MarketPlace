@@ -12,10 +12,10 @@ import {
   CTextarea,
   CInput,
   CInputFile,
-  CInputCheckbox,
-  CInputRadio,
+  //CInputCheckbox,
+  //CInputRadio,
   CLabel,
-  CSelect,
+  //CSelect,
   CRow,
   CSwitch,
 } from "@coreui/react";
@@ -23,6 +23,51 @@ import CIcon from "@coreui/icons-react";
 //import { DocsLink } from "src/reusable";
 
 export default function Index() {
+
+  const [ProductData , setProductData] = useState({ProLive:true, ProImages:[]})
+
+
+  const Livechange = () => {
+    setProductData( prevProductData => { 
+      return {...prevProductData ,ProLive : (ProductData.ProLive) ? false : true }
+    })
+  }
+
+  const Namechange = (e) => {
+    setProductData( prevProductData => { 
+      return {...prevProductData ,ProName : e.target.value }
+    })
+  }
+  const Descchange = (e) => {
+    setProductData( prevProductData => { 
+      return {...prevProductData ,ProDesc : e.target.value }
+    })
+  }
+  const Pricechange = (e) => {
+    setProductData( prevProductData => { 
+      return {...prevProductData ,ProPrice : e.target.value }
+    })
+  }
+  const Discountchange = (e) => {
+    setProductData( prevProductData => { 
+      return {...prevProductData ,ProDiscount : e.target.value }
+    })
+  }
+  const Stockchange = (e) => {
+    setProductData( prevProductData => { 
+      return {...prevProductData ,ProStock : e.target.value }
+    })
+  }
+
+  const Imagechange = (e) => {
+    setProductData( prevProductData => {
+      return {...prevProductData ,ProImages : Array.from(e.target.files) }
+    })
+  }
+
+  const handlSubmit = () => {
+    console.log(ProductData)
+  }
   return (
     <>
       <CRow>
@@ -30,10 +75,9 @@ export default function Index() {
           <CCard>
             <CForm
               action=""
-              method="post"
+              method="get"
               encType="multipart/form-data"
-              className="form-horizontal"
-            >
+              className="form-horizontal">
               <CCardHeader>
                 <CFormGroup row>
                   <CCol tag="label" sm="9">
@@ -50,6 +94,7 @@ export default function Index() {
                       defaultChecked
                       shape="pill"
                       variant="opposite"
+                      onClick={Livechange}
                     />
                   </CCol>
                 </CFormGroup>{" "}
@@ -64,6 +109,7 @@ export default function Index() {
                       id="text-input"
                       name="text-input"
                       placeholder="Text"
+                      onChange={Namechange}
                     />
                     <CFormText>make a brief name for the product</CFormText>
                   </CCol>
@@ -78,6 +124,7 @@ export default function Index() {
                       id="textarea-input"
                       rows="9"
                       placeholder="Content..."
+                      onChange={Descchange}
                     />
                   </CCol>
                 </CFormGroup>
@@ -93,6 +140,7 @@ export default function Index() {
                       id="text-input"
                       name="text-input"
                       placeholder="$"
+                      onChange={Pricechange}
                     />
                   </CCol>
 
@@ -107,6 +155,7 @@ export default function Index() {
                       id="text-input"
                       name="text-input"
                       placeholder="Discount"
+                      onChange={Descchange}
                     />
                   </CCol>
                 </CFormGroup>
@@ -123,6 +172,7 @@ export default function Index() {
                       id="text-input"
                       name="text-input"
                       placeholder="Stock"
+                      onChange={Stockchange}
                     />
                   </CCol>
                 </CFormGroup>
@@ -239,6 +289,7 @@ export default function Index() {
                       name="file-multiple-input"
                       multiple
                       custom
+                      onChange={Imagechange}
                     />
                     <CLabel htmlFor="file-multiple-input" variant="custom-file">
                       Choose Pictures...
@@ -251,7 +302,7 @@ export default function Index() {
               <CButton className="" type="reset" size="sm" color="danger">
                 <CIcon name="cil-ban" /> Reset
               </CButton>
-              <CButton className="" type="submit" size="sm" color="primary">
+              <CButton onClick={handlSubmit} className="" type="submit" size="sm" color="primary">
                 <CIcon name="cil-scrubber" /> Submit
               </CButton>
             </CCardFooter>
@@ -263,7 +314,13 @@ export default function Index() {
               Product Pictures
               {/* <DocsLink name="CCard" /> */}
             </CCardHeader>
-            <CCardBody>No Product Pictures</CCardBody>
+            <CCardBody>
+
+            {
+              ProductData.ProImages.map(image=>(
+                <img  className="w-50" src={URL.createObjectURL(image)}/>
+            ))}
+            </CCardBody>
           </CCard>
         </CCol>
       </CRow>

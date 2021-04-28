@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import {
-  CBadge,
+  //CBadge,
   CCard,
   CCardBody,
   CCardHeader,
@@ -12,21 +12,6 @@ import {
 } from "@coreui/react";
 
 import usersData from "../ProductsData.json";
-
-const getBadge = (status) => {
-  switch (status) {
-    case "Active":
-      return "success";
-    case "Inactive":
-      return "secondary";
-    case "Pending":
-      return "warning";
-    case "Banned":
-      return "danger";
-    default:
-      return "primary";
-  }
-};
 
 export default function Index() {
   const history = useHistory();
@@ -68,7 +53,7 @@ export default function Index() {
                 'product': (item) => (
                   <td className="w-25">
                     <div className="w-25">
-                      <img className="w-25" src={item.product}/>
+                      <img alt={item.name} className="w-25" src={item.product}/>
                     </div>
                   </td>
                 ),
