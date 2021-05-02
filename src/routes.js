@@ -64,6 +64,7 @@ const ALLProducts = React.lazy(() => import("./views/Products/AllProducts"));
 const ADDProducts = React.lazy(() => import("./views/Products/AddProducts"));
 
 const TheProduct = React.lazy(() => import("./views/Products/MProducts"));
+const EditProduct = React.lazy(() => import("./views/Products/EditProduct"));
 //importing Prooducts Components
 const ALLOrders = React.lazy(() => import("./views/Orders/AllOrders"));
 
@@ -146,6 +147,12 @@ const routes = [
     exact: true,
     name: "Product Details",
     component: TheProduct,
+  },
+  {
+    path: "/products/edit/:id",
+    exact: true,
+    name: "Product Details",
+    component: EditProduct,
   },
   // ADDing Orders Routes /////////
   {

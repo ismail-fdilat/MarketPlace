@@ -20,57 +20,64 @@ import {
   CSwitch,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
-
+import ProductsData from "../ProductsData.json";
+import { ImCross} from 'react-icons/im';
 //import { DocsLink } from "src/reusable";
 
-
-
-
-export default function Index() {
-
-  const [ProductData , setProductData] = useState({ProLive:true, ProImages:[]})
-
+export default function Index({ match }) {
+  const [ProductData, setProductData] = useState({
+    ProLive: !ProductsData[match.params.id].live,
+    ProImages: ProductsData[match.params.id].product,
+    ProName: ProductsData[match.params.id].name,
+    ProDesc: ProductsData[match.params.id].description,
+    ProPrice: ProductsData[match.params.id].price,
+    ProDiscount: ProductsData[match.params.id].discount,
+    ProStock: ProductsData[match.params.id].stock
+  });
 
   const Livechange = () => {
-    setProductData( prevProductData => { 
-      return {...prevProductData ,ProLive : (ProductData.ProLive) ? false : true }
-    })
-  }
+    setProductData((prevProductData) => {
+      return {
+        ...prevProductData,
+        ProLive: ProductData.ProLive ? false : true,
+      };
+    });
+  };
 
   const Namechange = (e) => {
-    setProductData( prevProductData => { 
-      return {...prevProductData ,ProName : e.target.value }
-    })
-  }
+    setProductData((prevProductData) => {
+      return { ...prevProductData, ProName: e.target.value };
+    });
+  };
   const Descchange = (e) => {
-    setProductData( prevProductData => { 
-      return {...prevProductData ,ProDesc : e.target.value }
-    })
-  }
+    setProductData((prevProductData) => {
+      return { ...prevProductData, ProDesc: e.target.value };
+    });
+  };
   const Pricechange = (e) => {
-    setProductData( prevProductData => { 
-      return {...prevProductData ,ProPrice : e.target.value }
-    })
-  }
+    setProductData((prevProductData) => {
+      return { ...prevProductData, ProPrice: e.target.value };
+    });
+  };
   const Discountchange = (e) => {
-    setProductData( prevProductData => { 
-      return {...prevProductData ,ProDiscount : e.target.value }
-    })
-  }
+    setProductData((prevProductData) => {
+      return { ...prevProductData, ProDiscount: e.target.value };
+    });
+  };
   const Stockchange = (e) => {
-    setProductData( prevProductData => { 
-      return {...prevProductData ,ProStock : e.target.value }
-    })
-  }
+    setProductData((prevProductData) => {
+      return { ...prevProductData, ProStock: e.target.value };
+    });
+  };
 
   const Imagechange = (e) => {
-    setProductData( prevProductData => {
-      return {...prevProductData ,ProImages : Array.from(e.target.files) }
-    })
-  }
+    setProductData((prevProductData) => {
+      return { ...prevProductData, ProImages: ProductData.ProImages.concat(Array.from(e.target.files)) };
+    });
+  };
 
   const handlSubmit = () => {
-    console.log(ProductData)
+    console.log(ProductData);
     //history.push('/products/Add-productss')
     /*
     ProductData.ProLive
@@ -81,9 +88,7 @@ export default function Index() {
     ProductData.ProStock
     ProductData.ProImages
     */
-  }
-
-
+  };
 
   return (
     <>
@@ -94,11 +99,12 @@ export default function Index() {
               action=""
               method="get"
               encType="multipart/form-data"
-              className="form-horizontal">
+              className="form-horizontal"
+            >
               <CCardHeader>
                 <CFormGroup row>
                   <CCol tag="label" sm="9">
-                    <h3>Add Product</h3>
+                    <h3>Product n° : {match.params.id}</h3>
                   </CCol>
                   <CCol
                     sm="3"
@@ -107,11 +113,11 @@ export default function Index() {
                     <h6>Live</h6>
                     <CSwitch
                       className="mr-1"
-                      color="dark"
+                      color="success"
                       defaultChecked
                       shape="pill"
-                      variant="opposite"
                       onClick={Livechange}
+                      checked={ProductData.ProLive}
                     />
                   </CCol>
                 </CFormGroup>{" "}
@@ -127,6 +133,7 @@ export default function Index() {
                       name="text-input"
                       placeholder="Text"
                       onChange={Namechange}
+                      value={ProductData.ProName}
                     />
                     <CFormText>make a brief name for the product</CFormText>
                   </CCol>
@@ -142,6 +149,7 @@ export default function Index() {
                       rows="9"
                       placeholder="Content..."
                       onChange={Descchange}
+                      value={ProductData.ProDesc}
                     />
                   </CCol>
                 </CFormGroup>
@@ -158,6 +166,7 @@ export default function Index() {
                       name="text-input"
                       placeholder="$"
                       onChange={Pricechange}
+                      value={ProductData.ProPrice}
                     />
                   </CCol>
 
@@ -173,7 +182,7 @@ export default function Index() {
                       name="Discountchange"
                       placeholder="Discount"
                       onChange={Discountchange}
-                      required
+                      value={ProductData.ProDiscount}
                     />
                   </CCol>
                 </CFormGroup>
@@ -191,111 +200,10 @@ export default function Index() {
                       name="text-input"
                       placeholder="Stock"
                       onChange={Stockchange}
+                      value={ProductData.ProStock}
                     />
                   </CCol>
                 </CFormGroup>
-                {/* <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel htmlFor="select">Select</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
-                    <CSelect custom name="select" id="select">
-                      <option value="0">Please select</option>
-                      <option value="1">Option #1</option>
-                      <option value="2">Option #2</option>
-                      <option value="3">Option #3</option>
-                    </CSelect>
-                  </CCol>
-                </CFormGroup>
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel>Inline Radios</CLabel>
-                  </CCol>
-                  <CCol md="9">
-                    <CFormGroup variant="custom-radio" inline>
-                      <CInputRadio
-                        custom
-                        id="inline-radio1"
-                        name="inline-radios"
-                        value="option1"
-                      />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-radio1">
-                        One
-                      </CLabel>
-                    </CFormGroup>
-                    <CFormGroup variant="custom-radio" inline>
-                      <CInputRadio
-                        custom
-                        id="inline-radio2"
-                        name="inline-radios"
-                        value="option2"
-                      />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-radio2">
-                        Two
-                      </CLabel>
-                    </CFormGroup>
-                    <CFormGroup variant="custom-radio" inline>
-                      <CInputRadio
-                        custom
-                        id="inline-radio3"
-                        name="inline-radios"
-                        value="option3"
-                      />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-radio3">
-                        Three
-                      </CLabel>
-                    </CFormGroup>
-                  </CCol>
-                </CFormGroup>
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel>Inline Checkboxes</CLabel>
-                  </CCol>
-                  <CCol md="9">
-                    <CFormGroup variant="custom-checkbox" inline>
-                      <CInputCheckbox
-                        custom
-                        id="inline-checkbox1"
-                        name="inline-checkbox1"
-                        value="option1"
-                      />
-                      <CLabel
-                        variant="custom-checkbox"
-                        htmlFor="inline-checkbox1"
-                      >
-                        One
-                      </CLabel>
-                    </CFormGroup>
-                    <CFormGroup variant="custom-checkbox" inline>
-                      <CInputCheckbox
-                        custom
-                        id="inline-checkbox2"
-                        name="inline-checkbox2"
-                        value="option2"
-                      />
-                      <CLabel
-                        variant="custom-checkbox"
-                        htmlFor="inline-checkbox2"
-                      >
-                        Two
-                      </CLabel>
-                    </CFormGroup>
-                    <CFormGroup variant="custom-checkbox" inline>
-                      <CInputCheckbox
-                        custom
-                        id="inline-checkbox3"
-                        name="inline-checkbox3"
-                        value="option3"
-                      />
-                      <CLabel
-                        variant="custom-checkbox"
-                        htmlFor="inline-checkbox3"
-                      >
-                        Three
-                      </CLabel>
-                    </CFormGroup>
-                  </CCol>
-                </CFormGroup>*/}
                 <hr></hr>
                 <CFormGroup row>
                   <CCol md="3">
@@ -320,7 +228,13 @@ export default function Index() {
               <CButton className="" type="reset" size="sm" color="danger">
                 <CIcon name="cil-ban" /> Reset
               </CButton>
-              <CButton onClick={handlSubmit} className="" type="submit" size="sm" color="primary">
+              <CButton
+                onClick={handlSubmit}
+                className=""
+                type="submit"
+                size="sm"
+                color="primary"
+              >
                 <CIcon name="cil-scrubber" /> Submit
               </CButton>
             </CCardFooter>
@@ -333,11 +247,14 @@ export default function Index() {
               {/* <DocsLink name="CCard" /> */}
             </CCardHeader>
             <CCardBody>
-            {
-              ProductData.ProImages.map(image=>(
-                <img className="w-50" src={URL.createObjectURL(image)}/>
-            ))
-            }
+                <CRow>
+                    {ProductData.ProImages.map((image) => (
+                        <CCol xl={6}>
+                            <ImCross></ImCross>
+                            <img className="w-100 rounded" src={(typeof image == 'string')? image : URL.createObjectURL(image)} />
+                        </CCol>
+                    ))}
+                </CRow>
             </CCardBody>
           </CCard>
         </CCol>
