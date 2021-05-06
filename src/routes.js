@@ -62,70 +62,20 @@ const User = React.lazy(() => import("./views/users/User"));
 // importing Prooducts Components
 const ALLProducts = React.lazy(() => import("./views/Products/AllProducts"));
 const ADDProducts = React.lazy(() => import("./views/Products/AddProducts"));
-const MProducts = React.lazy(() => import("./views/Products/MProducts"));
+const ADDExProducts = React.lazy(() => import("./views/Products/AddExProducts"));
+
 const TheProduct = React.lazy(() => import("./views/Products/MProducts"));
+const EditProduct = React.lazy(() => import("./views/Products/EditProduct"));
 //importing Prooducts Components
 const ALLOrders = React.lazy(() => import("./views/Orders/AllOrders"));
-const MOrder = React.lazy(() => import("./views/Orders/MOrders"));
-const TheOrder = React.lazy(() => import("./views/Orders/MOrders"));
+const ViewOrders = React.lazy(() => import("./views/Orders/MOrders"));
+// const TheOrder = React.lazy(() => import("./views/Orders/MOrders"));
 
 /// Routes
 const routes = [
   { path: "/", exact: true, name: "Home" },
-  { path: "/dashboard", name: "Dashboard", component: Dashboard },
-  { path: "/theme", name: "Theme", component: Colors, exact: true },
-  { path: "/theme/colors", name: "Colors", component: Colors },
-  { path: "/theme/typography", name: "Typography", component: Typography },
-  { path: "/base", name: "Base", component: Cards, exact: true },
-  { path: "/base/breadcrumbs", name: "Breadcrumbs", component: Breadcrumbs },
-  { path: "/base/cards", name: "Cards", component: Cards },
-  { path: "/base/carousels", name: "Carousel", component: Carousels },
-  { path: "/base/collapses", name: "Collapse", component: Collapses },
-  { path: "/base/forms", name: "Forms", component: BasicForms },
-  { path: "/base/jumbotrons", name: "Jumbotrons", component: Jumbotrons },
-  { path: "/base/list-groups", name: "List Groups", component: ListGroups },
-  { path: "/base/navbars", name: "Navbars", component: Navbars },
-  { path: "/base/navs", name: "Navs", component: Navs },
-  { path: "/base/paginations", name: "Paginations", component: Paginations },
-  { path: "/base/popovers", name: "Popovers", component: Popovers },
-  { path: "/base/progress-bar", name: "Progress Bar", component: ProgressBar },
-  { path: "/base/switches", name: "Switches", component: Switches },
-  { path: "/base/tables", name: "Tables", component: Tables },
-  { path: "/base/tabs", name: "Tabs", component: Tabs },
-  { path: "/base/tooltips", name: "Tooltips", component: Tooltips },
-  { path: "/buttons", name: "Buttons", component: Buttons, exact: true },
-  { path: "/buttons/buttons", name: "Buttons", component: Buttons },
-  {
-    path: "/buttons/button-dropdowns",
-    name: "Dropdowns",
-    component: ButtonDropdowns,
-  },
-  {
-    path: "/buttons/button-groups",
-    name: "Button Groups",
-    component: ButtonGroups,
-  },
-  {
-    path: "/buttons/brand-buttons",
-    name: "Brand Buttons",
-    component: BrandButtons,
-  },
-  { path: "/charts", name: "Charts", component: Charts },
-  { path: "/icons", exact: true, name: "Icons", component: CoreUIIcons },
-  { path: "/icons/coreui-icons", name: "CoreUI Icons", component: CoreUIIcons },
-  { path: "/icons/flags", name: "Flags", component: Flags },
-  { path: "/icons/brands", name: "Brands", component: Brands },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    component: Alerts,
-    exact: true,
-  },
-  { path: "/notifications/alerts", name: "Alerts", component: Alerts },
-  { path: "/notifications/badges", name: "Badges", component: Badges },
-  { path: "/notifications/modals", name: "Modals", component: Modals },
-  { path: "/notifications/toaster", name: "Toaster", component: Toaster },
-  { path: "/widgets", name: "Widgets", component: Widgets },
+
+  { path: "/admin/dashboard", name: "Dashboard", component: Dashboard },
   { path: "/users", exact: true, name: "Users", component: Users },
   { path: "/users/:id", exact: true, name: "User Details", component: User },
   // ADDing Prooducts Routes /////////
@@ -142,10 +92,10 @@ const routes = [
     component: ADDProducts,
   },
   {
-    path: "/products/Manage-products",
+    path: "/products/Add-extern-products",
     exact: true,
-    name: "Manage products",
-    component: MProducts,
+    name: "Add extern products",
+    component: ADDExProducts,
   },
   {
     path: "/products/:id",
@@ -154,9 +104,10 @@ const routes = [
     component: TheProduct,
   },
   {
-    path: "/products/Manage-products/:id",
-    name: "Manage products",
-    component: MProducts,
+    path: "/products/edit/:id",
+    exact: true,
+    name: "Product Details",
+    component: EditProduct,
   },
   // ADDing Orders Routes /////////
   {
@@ -166,17 +117,11 @@ const routes = [
     component: ALLOrders,
   },
   {
-    path: "/orders/Manage-Orders",
+    path: "/orders/:id",
     exact: true,
-    name: "Manage Orders",
-    component: MOrder,
-  },
-  // {
-  //   path: "/orders/All-orders/:id",
-  //   exact: true,
-  //   name: "Order",
-  //   component: TheOrder,
-  // },
+    name: "Order",
+    component: ViewOrders,
+  }
 ];
 
 export default routes;

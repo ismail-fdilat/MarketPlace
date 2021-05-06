@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
-  CBadge,
+  //CBadge,
   CCard,
   CCardBody,
   CCardHeader,
@@ -9,24 +9,12 @@ import {
   CDataTable,
   CRow,
   CPagination,
+  CButton,
+  CBadge,
 } from "@coreui/react";
-
-import usersData from "../../users/UsersData";
-
-const getBadge = (status) => {
-  switch (status) {
-    case "Active":
-      return "success";
-    case "Inactive":
-      return "secondary";
-    case "Pending":
-      return "warning";
-    case "Banned":
-      return "danger";
-    default:
-      return "primary";
-  }
-};
+import CIcon from "@coreui/icons-react";
+import { FaEye, FaPencilAlt, FaTrash } from "react-icons/fa";
+import OrdersData from "../OrdersData.json";
 
 export default function Index() {
   const history = useHistory();
@@ -35,7 +23,12 @@ export default function Index() {
   const [page, setPage] = useState(currentPage);
 
   const pageChange = (newPage) => {
-    currentPage !== newPage && history.push(`/users?page=${newPage}`);
+    currentPage !== newPage &&
+      history.push(`/products/All-products?page=${newPage}`);
+  };
+
+  const DeletProd = (index) => {
+    history.push(`/products/All-products/${index}`);
   };
 
   useEffect(() => {
@@ -44,39 +37,49 @@ export default function Index() {
 
   return (
     <CRow>
-      <CCol xl={6}>
+      <CCol xl={12}>
         <CCard>
-          <CCardHeader>
-            Users
-            <small className="text-muted"> example</small>
-          </CCardHeader>
+          <CCardHeader>Products</CCardHeader>
           <CCardBody>
             <CDataTable
-              items={usersData}
+              items={OrdersData}
               fields={[
-                { key: "name", _classes: "font-weight-bold" },
-                "registered",
-                "role",
+                { key: "id", _classes: "font-weight-bold" },
+                "date",
+                "costumer",
+                "Payment",
                 "status",
+                "totalprice",
               ]}
               hover
               striped
+              tableFilter
+              itemsPerPageSelect
+              clickableRows
+              onRowClick={(order) => history.push(`/orders/${order.id}`)}
               itemsPerPage={5}
               activePage={page}
-              clickableRows
-              onRowClick={(item) => history.push(`/users/${item.id}`)}
               scopedSlots={{
-                status: (item) => (
-                  <td>
-                    <CBadge color={getBadge(item.status)}>{item.status}</CBadge>
-                  </td>
-                ),
+                live: (item) => {
+                  if (item.live == true)
+                    return (
+                      <td className="w-25">
+                        <CBadge color={"success"}>Online</CBadge>
+                      </td>
+                    );
+                  else
+                    return (
+                      <td className="w-25">
+                        <CBadge color={"danger"}>Offline</CBadge>
+                      </td>
+                    );
+                }
               }}
             />
             <CPagination
               activePage={page}
               onActivePageChange={pageChange}
-              pages={5}
+              pages={Math.round(OrdersData.length / 5)}
               doubleArrows={false}
               align="center"
             />

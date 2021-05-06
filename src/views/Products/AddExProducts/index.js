@@ -98,7 +98,7 @@ export default function Index() {
               <CCardHeader>
                 <CFormGroup row>
                   <CCol tag="label" sm="9">
-                    <h3>Add Product</h3>
+                    <h3>Add Extern Product</h3>
                   </CCol>
                   <CCol
                     sm="3"

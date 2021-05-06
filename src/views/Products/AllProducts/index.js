@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
-  CBadge,
+  //CBadge,
   CCard,
   CCardBody,
   CCardHeader,
@@ -9,24 +9,12 @@ import {
   CDataTable,
   CRow,
   CPagination,
+  CButton,
+  CBadge,
 } from "@coreui/react";
-
-import usersData from "../../users/UsersData";
-
-const getBadge = (status) => {
-  switch (status) {
-    case "Active":
-      return "success";
-    case "Inactive":
-      return "secondary";
-    case "Pending":
-      return "warning";
-    case "Banned":
-      return "danger";
-    default:
-      return "primary";
-  }
-};
+import CIcon from "@coreui/icons-react";
+import { FaEye, FaPencilAlt, FaTrash } from "react-icons/fa";
+import ProductsData from "../ProductsData.json";
 
 export default function Index() {
   const history = useHistory();
@@ -35,7 +23,12 @@ export default function Index() {
   const [page, setPage] = useState(currentPage);
 
   const pageChange = (newPage) => {
-    currentPage !== newPage && history.push(`/users?page=${newPage}`);
+    currentPage !== newPage &&
+      history.push(`/products/All-products?page=${newPage}`);
+  };
+
+  const DeletProd = (index) => {
+    history.push(`/products/All-products/${index}`);
   };
 
   useEffect(() => {
@@ -49,32 +42,92 @@ export default function Index() {
           <CCardHeader>Products</CCardHeader>
           <CCardBody>
             <CDataTable
-              items={usersData}
+              items={ProductsData}
               fields={[
-                { key: "product", _classes: "font-weight-bold" },
-                "name",
+                "product",
+                { key: "name", _classes: "font-weight-bold" },
                 "price",
                 "stock",
                 "discount",
+                "live",
+                "action",
               ]}
               hover
               striped
+              tableFilter
+              itemsPerPageSelect
               itemsPerPage={5}
               activePage={page}
-              clickableRows
-              onRowClick={(item) => history.push(`/products/${item.id}`)}
               scopedSlots={{
-                status: (item) => (
-                  <td>
-                    <CBadge color={getBadge(item.status)}>{item.status}</CBadge>
+                product: (item) => (
+                  <td className="w-25">
+                    <div className="w-25">
+                      <img
+                        alt={item.name}
+                        className="w-25"
+                        src={item.product[0]}
+                      />
+                    </div>
                   </td>
                 ),
+                live: (item) => {
+                  if (item.live == true)
+                    return (
+                      <td className="w-25">
+                        <CBadge color={"success"}>Online</CBadge>
+                      </td>
+                    );
+                  else
+                    return (
+                      <td className="w-25">
+                        <CBadge color={"danger"}>Offline</CBadge>
+                      </td>
+                    );
+                },
+                action: (_, key) => {
+                  return (
+                    <td className="w-25">
+                      <CButton
+                        color="primary"
+                        className="mx-1"
+                        onClick={() => history.push(`/products/${key}`)}
+                        variant="outline"
+                        shape="square"
+                      >
+                        {" "}
+                        <FaEye style={{ right: -10 }} size={18} />
+                      </CButton>
+                      <CButton
+                        color="primary"
+                        className="mx-1"
+                        variant="outline"
+                        shape="square"
+                        onClick={() => history.push(`/products/edit/${key}`)}
+                      >
+                        {" "}
+                        <FaPencilAlt size={18} />{" "}
+                      </CButton>
+                      <CButton
+                        color="primary"
+                        className="mx-1"
+                        variant="outline"
+                        shape="square"
+                        onClick={() => {
+                          DeletProd(key);
+                        }}
+                      >
+                        {" "}
+                        <FaTrash size={18} />{" "}
+                      </CButton>
+                    </td>
+                  );
+                },
               }}
             />
             <CPagination
               activePage={page}
               onActivePageChange={pageChange}
-              pages={5}
+              pages={Math.round(ProductsData.length / 5)}
               doubleArrows={false}
               align="center"
             />

@@ -31,8 +31,12 @@ const _nav = [
       },
       {
         _tag: "CSidebarNavItem",
-        name: "Manage Products",
-        to: "/products/Manage-products",
+        name: "Add new Product",
+        to: "/products/Add-extern-products",
+        badge: {
+          color: "info",
+          text: "EXTERN",
+        },
       },
     ],
   },
@@ -46,12 +50,6 @@ const _nav = [
         _tag: "CSidebarNavItem",
         name: "All Orders",
         to: "/orders/All-orders",
-      },
-
-      {
-        _tag: "CSidebarNavItem",
-        name: "Manage Orders",
-        to: "/orders/Manage-Orders",
       },
     ],
   },
