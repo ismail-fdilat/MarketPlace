@@ -74,7 +74,6 @@ const ViewOrders = React.lazy(() => import("./views/Orders/MOrders"));
 /// Routes
 const routes = [
   { path: "/", exact: true, name: "Home" },
-
   { path: "/admin/dashboard", name: "Dashboard", component: Dashboard },
   { path: "/users", exact: true, name: "Users", component: Users },
   { path: "/users/:id", exact: true, name: "User Details", component: User },
