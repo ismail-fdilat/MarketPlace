@@ -12,8 +12,8 @@ import {
   CButton,
   CBadge,
 } from "@coreui/react";
-import CIcon from '@coreui/icons-react'
-import { FaEye, FaPencilAlt, FaTrash } from 'react-icons/fa';
+import CIcon from "@coreui/icons-react";
+import { FaEye, FaPencilAlt, FaTrash } from "react-icons/fa";
 import ProductsData from "../ProductsData.json";
 
 export default function Index() {
@@ -23,7 +23,6 @@ export default function Index() {
   const [page, setPage] = useState(currentPage);
 
   const pageChange = (newPage) => {
-    
     currentPage !== newPage &&
       history.push(`/products/All-products?page=${newPage}`);
   };
@@ -51,7 +50,7 @@ export default function Index() {
                 "stock",
                 "discount",
                 "live",
-                "action"
+                "action",
               ]}
               hover
               striped
@@ -59,44 +58,76 @@ export default function Index() {
               itemsPerPageSelect
               itemsPerPage={5}
               activePage={page}
-              
               scopedSlots={{
-                'product': (item) => (
+                product: (item) => (
                   <td className="w-25">
                     <div className="w-25">
-                      <img alt={item.name} className="w-25" src={item.product[0]}/>
+                      <img
+                        alt={item.name}
+                        className="w-25"
+                        src={item.product[0]}
+                      />
                     </div>
                   </td>
                 ),
-                'live': (item) => {
-                  if(item.live == true)
-                  return (
-                  <td className="w-25">
-                    <CBadge color={'success'}>
-                      Online
-                    </CBadge>
-                  </td>)
+                live: (item) => {
+                  if (item.live == true)
+                    return (
+                      <td className="w-25">
+                        <CBadge color={"success"}>Online</CBadge>
+                      </td>
+                    );
                   else
-                  return(
-                  <td className="w-25">
-                    <CBadge color={'danger'}>
-                      Offline
-                    </CBadge>
-                  </td>
-                )},
-                'action': (_, key) => {return (
-                  <td className="w-25">
-                   <CButton color="primary" className='mx-1' onClick={() => history.push(`/products/${key}`)} variant="outline" shape="square" > <FaEye style={{right : -10, }} size={18}/></CButton>
-                   <CButton color="primary" className='mx-1' variant="outline" shape="square" onClick={() => history.push(`/products/edit/${key}`)} > <FaPencilAlt size={18}/> </CButton>
-                   <CButton color="primary" className='mx-1' variant="outline" shape="square" onClick={()=>{DeletProd(key)}} > <FaTrash size={18}/> </CButton>
-                  </td>
-                )},
+                    return (
+                      <td className="w-25">
+                        <CBadge color={"danger"}>Offline</CBadge>
+                      </td>
+                    );
+                },
+                action: (_, key) => {
+                  return (
+                    <td className="w-25">
+                      <CButton
+                        color="primary"
+                        className="mx-1"
+                        onClick={() => history.push(`/products/${key}`)}
+                        variant="outline"
+                        shape="square"
+                      >
+                        {" "}
+                        <FaEye style={{ right: -10 }} size={18} />
+                      </CButton>
+                      <CButton
+                        color="primary"
+                        className="mx-1"
+                        variant="outline"
+                        shape="square"
+                        onClick={() => history.push(`/products/edit/${key}`)}
+                      >
+                        {" "}
+                        <FaPencilAlt size={18} />{" "}
+                      </CButton>
+                      <CButton
+                        color="primary"
+                        className="mx-1"
+                        variant="outline"
+                        shape="square"
+                        onClick={() => {
+                          DeletProd(key);
+                        }}
+                      >
+                        {" "}
+                        <FaTrash size={18} />{" "}
+                      </CButton>
+                    </td>
+                  );
+                },
               }}
             />
             <CPagination
               activePage={page}
               onActivePageChange={pageChange}
-              pages={Math.round(ProductsData.length/5)}
+              pages={Math.round(ProductsData.length / 5)}
               doubleArrows={false}
               align="center"
             />

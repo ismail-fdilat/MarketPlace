@@ -9,7 +9,21 @@
     "stock": "Guest",
     "discount": "Pending",
     "description": "hello world",
-    "live": true
+    "live": true,
+    "reviews": [
+      {
+        "user": "hassan",
+        "review": "every thing is good every thing is good every thing is good every thing is good every thing is good every thing is good every thing is good every thing is good every thing is good every thing is good every thing is good "
+      },
+      {
+        "user": "ahmad",
+        "review": "i will buy it every time i need it"
+      },
+      {
+        "user": "abdelah",
+        "review": "every thing is gooood"
+      }
+    ]
   },
   {
     "product": [
@@ -20,7 +34,21 @@
     "stock": 25,
     "discount": "Pending",
     "description": "hello world",
-    "live": false
+    "live": false,
+    "reviews": [
+      {
+        "user": "hassan",
+        "review": "every thing is good"
+      },
+      {
+        "user": "ahmad",
+        "review": "i will buy it every time i need it"
+      },
+      {
+        "user": "abdelah",
+        "review": "every thing is gooood"
+      }
+    ]
   },
   {
     "product": [
@@ -32,7 +60,21 @@
     "stock": "Guest",
     "discount": "Pending",
     "description": "hello world",
-    "live": true
+    "live": true,
+    "reviews": [
+      {
+        "user": "hassan",
+        "review": "every thing is good"
+      },
+      {
+        "user": "ahmad",
+        "review": "i will buy it every time i need it"
+      },
+      {
+        "user": "abdelah",
+        "review": "every thing is gooood"
+      }
+    ]
   },
   {
     "product": [
@@ -43,7 +85,21 @@
     "stock": 25,
     "discount": "Pending",
     "description": "hello world",
-    "live": false
+    "live": false,
+    "reviews": [
+      {
+        "user": "hassan",
+        "review": "every thing is good"
+      },
+      {
+        "user": "ahmad",
+        "review": "i will buy it every time i need it"
+      },
+      {
+        "user": "abdelah",
+        "review": "every thing is gooood"
+      }
+    ]
   },
   {
     "product": [

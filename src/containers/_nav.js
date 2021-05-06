@@ -29,6 +29,15 @@ const _nav = [
         name: "Add new Product",
         to: "/products/Add-products",
       },
+      {
+        _tag: "CSidebarNavItem",
+        name: "Add new Product",
+        to: "/products/Add-extern-products",
+        badge: {
+          color: "info",
+          text: "EXTERN",
+        },
+      },
     ],
   },
   {
