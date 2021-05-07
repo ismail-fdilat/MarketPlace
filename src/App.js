@@ -9,7 +9,7 @@ const loading = (
 );
 
 // Containers
-const Client = React.lazy(() => import("./Client/index.js"));
+const Client = React.lazy(() => import("./views/Client/index"));
 const TheLayout = React.lazy(() => import("./containers/TheLayout"));
 
 // Pages
@@ -58,6 +58,7 @@ class App extends Component {
             />
             <Route
               path="/"
+              exact
               name="Home"
               render={(props) => <Client {...props} />}
             />
