@@ -9,8 +9,8 @@ import {
   CDropdownToggle
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import ChartLineSimple from '../charts/ChartLineSimple'
-import ChartBarSimple from '../charts/ChartBarSimple'
+import ChartLineSimple from '../../components/charts/ChartLineSimple'
+import ChartBarSimple from '../../components/charts/ChartBarSimple'
 
 const WidgetsDropdown = () => {
   // render

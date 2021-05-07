@@ -9,14 +9,14 @@ const loading = (
 );
 
 // Containers
-const Client = React.lazy(() => import("./Client/index.js"));
+const Client = React.lazy(() => import("./views/Client/index"));
 const TheLayout = React.lazy(() => import("./containers/TheLayout"));
 
 // Pages
-const Login = React.lazy(() => import("./views/pages/login/Login"));
-const Register = React.lazy(() => import("./views/pages/register/Register"));
-const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
-const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
+const Login = React.lazy(() => import("./views/login/Login"));
+const Register = React.lazy(() => import("./views/register/Register"));
+const Page404 = React.lazy(() => import("./views/page404/Page404"));
+const Page500 = React.lazy(() => import("./views/page500/Page500"));
 
 
 
@@ -58,6 +58,7 @@ class App extends Component {
             />
             <Route
               path="/"
+              exact
               name="Home"
               render={(props) => <Client {...props} />}
             />
