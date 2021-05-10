@@ -3,14 +3,14 @@ import { Redirect } from 'react-router-dom'
 
 const AppRoutes = [
   {
-    path: '/apps/email',
+    path: '/admin/apps/email',
     exact: true,
     appLayout: true,
     className: 'email-application',
     component: lazy(() => import('../../views/apps/email'))
   },
   {
-    path: '/apps/email/:folder',
+    path: '/admin/apps/email/:folder',
     exact: true,
     appLayout: true,
     className: 'email-application',
@@ -20,7 +20,7 @@ const AppRoutes = [
     }
   },
   {
-    path: '/apps/email/label/:label',
+    path: '/admin/apps/email/label/:label',
     exact: true,
     appLayout: true,
     className: 'email-application',
@@ -30,27 +30,27 @@ const AppRoutes = [
     }
   },
   {
-    path: '/apps/email/:filter',
+    path: '/admin/apps/email/:filter',
     component: lazy(() => import('../../views/apps/email')),
     meta: {
       navLink: '/apps/email'
     }
   },
   {
-    path: '/apps/chat',
+    path: '/admin/apps/chat',
     appLayout: true,
     className: 'chat-application',
     component: lazy(() => import('../../views/apps/chat'))
   },
   {
-    path: '/apps/todo',
+    path: '/admin/apps/todo',
     exact: true,
     appLayout: true,
     className: 'todo-application',
     component: lazy(() => import('../../views/apps/todo'))
   },
   {
-    path: '/apps/todo/:filter',
+    path: '/admin/apps/todo/:filter',
     appLayout: true,
     exact: true,
     className: 'todo-application',
@@ -60,7 +60,7 @@ const AppRoutes = [
     }
   },
   {
-    path: '/apps/todo/tag/:tag',
+    path: '/admin/apps/todo/tag/:tag',
     appLayout: true,
     className: 'todo-application',
     component: lazy(() => import('../../views/apps/todo')),
@@ -69,64 +69,64 @@ const AppRoutes = [
     }
   },
   {
-    path: '/apps/calendar',
+    path: '/admin/apps/calendar',
     component: lazy(() => import('../../views/apps/calendar'))
   },
   {
-    path: '/apps/invoice/list',
+    path: '/admin/apps/invoice/list',
     component: lazy(() => import('../../views/apps/invoice/list'))
   },
   {
-    path: '/apps/invoice/preview/:id',
+    path: '/admin/apps/invoice/preview/:id',
     component: lazy(() => import('../../views/apps/invoice/preview')),
     meta: {
-      navLink: '/apps/invoice/preview'
+      navLink: '/admin/apps/invoice/preview'
     }
   },
   {
-    path: '/apps/invoice/preview',
+    path: '/admin/apps/invoice/preview',
     exact: true,
-    component: () => <Redirect to='/apps/invoice/preview/4987' />
+    component: () => <Redirect to='/admin/apps/invoice/preview/4987' />
   },
   {
-    path: '/apps/invoice/edit/:id',
+    path: '/admin/apps/invoice/edit/:id',
     component: lazy(() => import('../../views/apps/invoice/edit')),
     meta: {
-      navLink: '/apps/invoice/edit'
+      navLink: '/admin/apps/invoice/edit'
     }
   },
   {
-    path: '/apps/invoice/edit',
+    path: '/admin/apps/invoice/edit',
     exact: true,
-    component: () => <Redirect to='/apps/invoice/edit/4987' />
+    component: () => <Redirect to='/admin/apps/invoice/edit/4987' />
   },
   {
-    path: '/apps/invoice/add',
+    path: '/admin/apps/invoice/add',
     component: lazy(() => import('../../views/apps/invoice/add'))
   },
   {
-    path: '/apps/invoice/print',
+    path: '/admin/apps/invoice/print',
     layout: 'BlankLayout',
     component: lazy(() => import('../../views/apps/invoice/print'))
   },
   {
-    path: '/apps/ecommerce/shop',
+    path: '/admin/apps/ecommerce/shop',
     className: 'ecommerce-application',
     component: lazy(() => import('../../views/apps/ecommerce/shop'))
   },
   {
-    path: '/apps/ecommerce/wishlist',
+    path: '/admin/apps/ecommerce/wishlist',
     className: 'ecommerce-application',
     component: lazy(() => import('../../views/apps/ecommerce/wishlist'))
   },
   {
-    path: '/apps/ecommerce/product-detail',
+    path: '/admin/apps/ecommerce/product-detail',
     exact: true,
     className: 'ecommerce-application',
     component: () => <Redirect to='/apps/ecommerce/product-detail/apple-i-phone-11-64-gb-black-26' />
   },
   {
-    path: '/apps/ecommerce/product-detail/:product',
+    path: '/admin/apps/ecommerce/product-detail/:product',
     exact: true,
     className: 'ecommerce-application',
     component: lazy(() => import('../../views/apps/ecommerce/detail')),
@@ -135,33 +135,33 @@ const AppRoutes = [
     }
   },
   {
-    path: '/apps/ecommerce/checkout',
+    path: '/admin/apps/ecommerce/checkout',
     className: 'ecommerce-application',
     component: lazy(() => import('../../views/apps/ecommerce/checkout'))
   },
   {
-    path: '/apps/user/list',
+    path: '/admin/apps/user/list',
     component: lazy(() => import('../../views/apps/user/list'))
   },
   {
-    path: '/apps/user/edit',
+    path: '/admin/apps/user/edit',
     exact: true,
     component: () => <Redirect to='/apps/user/edit/1' />
   },
   {
-    path: '/apps/user/edit/:id',
+    path: '/admin/apps/user/edit/:id',
     component: lazy(() => import('../../views/apps/user/edit')),
     meta: {
       navLink: '/apps/user/edit'
     }
   },
   {
-    path: '/apps/user/view',
+    path: '/admin/apps/user/view',
     exact: true,
     component: () => <Redirect to='/apps/user/view/1' />
   },
   {
-    path: '/apps/user/view/:id',
+    path: '/admin/apps/user/view/:id',
     component: lazy(() => import('../../views/apps/user/view')),
     meta: {
       navLink: '/apps/user/view'

@@ -15,73 +15,73 @@ export default [
             id: 'input',
             title: 'Input',
             icon: <Circle />,
-            navLink: '/forms/elements/input'
+            navLink: '/admin/forms/elements/input'
           },
           {
             id: 'inputGroup',
             title: 'Input Groups',
             icon: <Circle />,
-            navLink: '/forms/elements/input-group'
+            navLink: '/admin/forms/elements/input-group'
           },
           {
             id: 'inputMask',
             title: 'Input Mask',
             icon: <Circle />,
-            navLink: '/forms/elements/input-mask'
+            navLink: '/admin/forms/elements/input-mask'
           },
           {
             id: 'textarea',
             title: 'Textarea',
             icon: <Circle />,
-            navLink: '/forms/elements/textarea'
+            navLink: '/admin/forms/elements/textarea'
           },
           {
             id: 'checkbox',
             title: 'Checkbox',
             icon: <Circle />,
-            navLink: '/forms/elements/checkbox'
+            navLink: '/admin/forms/elements/checkbox'
           },
           {
             id: 'radio',
             title: 'Radio',
             icon: <Circle />,
-            navLink: '/forms/elements/radio'
+            navLink: '/admin/forms/elements/radio'
           },
           {
             id: 'switch',
             title: 'Switch',
             icon: <Circle />,
-            navLink: '/forms/elements/switch'
+            navLink: '/admin/forms/elements/switch'
           },
           {
             id: 'select',
             title: 'Select',
             icon: <Circle />,
-            navLink: '/forms/elements/select'
+            navLink: '/admin/forms/elements/select'
           },
           {
             id: 'numberInput',
             title: 'Number Input',
             icon: <Circle />,
-            navLink: '/forms/elements/number-input'
+            navLink: '/admin/forms/elements/number-input'
           },
           {
             id: 'fileUploader',
             title: 'File Uploader',
             icon: <Circle />,
-            navLink: '/forms/elements/file-uploader'
+            navLink: '/admin/forms/elements/file-uploader'
           },
           {
             id: 'quillEditor',
             title: 'Editor',
             icon: <Circle />,
-            navLink: '/forms/elements/editor'
+            navLink: '/admin/forms/elements/editor'
           },
           {
             id: 'date_&_timePicker',
             title: 'Date & Time Picker',
             icon: <Circle />,
-            navLink: '/forms/elements/pickers'
+            navLink: '/admin/forms/elements/pickers'
           }
         ]
       },
@@ -89,13 +89,13 @@ export default [
         id: 'formLayouts',
         title: 'Form Layout',
         icon: <Box />,
-        navLink: '/forms/layout/form-layout'
+        navLink: '/admin/forms/layout/form-layout'
       },
       {
         id: 'wizard',
         title: 'Form Wizard',
         icon: <Package />,
-        navLink: '/forms/wizard'
+        navLink: '/admin/forms/wizard'
       },
       {
         id: 'formValidation',
@@ -106,13 +106,13 @@ export default [
             id: 'reactHookForm',
             title: 'React Hook Form',
             icon: <Circle />,
-            navLink: '/forms/react-hook-form'
+            navLink: '/admin/forms/react-hook-form'
           },
           {
             id: 'reactstrapVal',
             title: 'Reactstrap',
             icon: <Circle />,
-            navLink: '/forms/reactstrap-validation'
+            navLink: '/admin/forms/reactstrap-validation'
           }
         ]
       },
@@ -120,13 +120,13 @@ export default [
         id: 'formRepeater',
         title: 'Form Repeater',
         icon: <RotateCw />,
-        navLink: '/forms/form-repeater'
+        navLink: '/admin/forms/form-repeater'
       },
       {
         id: 'tablesReactstrap',
         title: 'Table',
         icon: <Server />,
-        navLink: '/tables/reactstrap'
+        navLink: '/admin/tables/reactstrap'
       },
       {
         id: 'dataTable',
@@ -137,13 +137,13 @@ export default [
             id: 'dtBasic',
             title: 'Basic',
             icon: <Circle />,
-            navLink: '/datatables/basic'
+            navLink: '/admin/datatables/basic'
           },
           {
             id: 'dtAdvance',
             title: 'Advanced',
             icon: <Circle />,
-            navLink: '/datatables/advance'
+            navLink: '/admin/datatables/advance'
           }
         ]
       }

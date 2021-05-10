@@ -8,19 +8,19 @@ export default [
     id: 'typography',
     title: 'Typography',
     icon: <Type size={12} />,
-    navLink: '/ui-element/typography'
+    navLink: '/admin/ui-element/typography'
   },
   {
     id: 'colors',
     title: 'Colors',
     icon: <Droplet size={20} />,
-    navLink: '/colors/colors'
+    navLink: '/admin/colors/colors'
   },
   {
     id: 'feather',
     title: 'Feather',
     icon: <Eye size={20} />,
-    navLink: '/icons/reactfeather'
+    navLink: '/admin/icons/reactfeather'
   },
   {
     id: 'cards',
@@ -33,31 +33,31 @@ export default [
         id: 'basic',
         title: 'Basic',
         icon: <Circle size={12} />,
-        navLink: '/cards/basic'
+        navLink: '/admin/cards/basic'
       },
       {
         id: 'cardAdvance',
         title: 'Advance',
         icon: <Circle size={12} />,
-        navLink: '/cards/advance'
+        navLink: '/admin/cards/advance'
       },
       {
         id: 'cardStatistics',
         title: 'Statistics',
         icon: <Circle size={12} />,
-        navLink: '/cards/statistics'
+        navLink: '/admin/cards/statistics'
       },
       {
         id: 'CardAnalytics',
         title: 'Analytics',
         icon: <Circle size={12} />,
-        navLink: '/cards/analytics'
+        navLink: '/admin/cards/analytics'
       },
       {
         id: 'cardActions',
         title: 'Actions',
         icon: <Circle size={12} />,
-        navLink: '/cards/action'
+        navLink: '/admin/cards/action'
       }
     ]
   },
@@ -70,151 +70,151 @@ export default [
         id: 'alerts',
         title: 'Alerts',
         icon: <Circle size={12} />,
-        navLink: '/components/alerts'
+        navLink: '/admin/components/alerts'
       },
       {
         id: 'autoComplete',
         title: 'Auto Complete',
         icon: <Circle size={12} />,
-        navLink: '/components/auto-complete'
+        navLink: '/admin/components/auto-complete'
       },
       {
         id: 'avatar',
         title: 'Avatar',
         icon: <Circle size={12} />,
-        navLink: '/components/avatar'
+        navLink: '/admin/components/avatar'
       },
       {
         id: 'badges',
         title: 'Badges',
         icon: <Circle size={12} />,
-        navLink: '/components/badges'
+        navLink: '/admin/components/badges'
       },
       {
         id: 'blockui',
         title: 'BlockUI',
         icon: <Circle size={12} />,
-        navLink: '/components/blockui'
+        navLink: '/admin/components/blockui'
       },
       {
         id: 'breadCrumbs',
         title: 'Breadcrumbs',
         icon: <Circle size={12} />,
-        navLink: '/components/breadcrumbs'
+        navLink: '/admin/components/breadcrumbs'
       },
       {
         id: 'buttons',
         title: 'Buttons',
         icon: <Circle size={12} />,
-        navLink: '/components/buttons'
+        navLink: '/admin/components/buttons'
       },
       {
         id: 'carousel',
         title: 'Carousel',
         icon: <Circle size={12} />,
-        navLink: '/components/carousel'
+        navLink: '/admin/components/carousel'
       },
       {
         id: 'collapse',
         title: 'Collapse',
         icon: <Circle size={12} />,
-        navLink: '/components/collapse'
+        navLink: '/admin/components/collapse'
       },
       {
         id: 'divider',
         title: 'Divider',
         icon: <Circle size={12} />,
-        navLink: '/components/divider'
+        navLink: '/admin/components/divider'
       },
       {
         id: 'dropDowns',
         title: 'Dropdowns',
         icon: <Circle size={12} />,
-        navLink: '/components/dropdowns'
+        navLink: '/admin/components/dropdowns'
       },
       {
         id: 'listGroup',
         title: 'List Group',
         icon: <Circle size={12} />,
-        navLink: '/components/list-group'
+        navLink: '/admin/components/list-group'
       },
       {
         id: 'mediaObjects',
         title: 'Media Objects',
         icon: <Circle size={12} />,
-        navLink: '/components/media-objects'
+        navLink: '/admin/components/media-objects'
       },
       {
         id: 'modals',
         title: 'Modals',
         icon: <Circle size={12} />,
-        navLink: '/components/modals'
+        navLink: '/admin/components/modals'
       },
       {
         id: 'navsComponent',
         title: 'Navs Component',
         icon: <Circle size={12} />,
-        navLink: '/components/nav-component'
+        navLink: '/admin/components/nav-component'
       },
       {
         id: 'pagination',
         title: 'Pagination',
         icon: <Circle size={12} />,
-        navLink: '/components/pagination'
+        navLink: '/admin/components/pagination'
       },
       {
         id: 'pillBadges',
         title: 'Pill Badges',
         icon: <Circle size={12} />,
-        navLink: '/components/pill-badges'
+        navLink: '/admin/components/pill-badges'
       },
       {
         id: 'pillsComponent',
         title: 'Pills Component',
         icon: <Circle size={12} />,
-        navLink: '/components/pills-component'
+        navLink: '/admin/components/pills-component'
       },
       {
         id: 'popovers',
         title: 'Popovers',
         icon: <Circle size={12} />,
-        navLink: '/components/popovers'
+        navLink: '/admin/components/popovers'
       },
       {
         id: 'progress',
         title: 'Progress',
         icon: <Circle size={12} />,
-        navLink: '/components/progress'
+        navLink: '/admin/components/progress'
       },
       {
         id: 'spinners',
         title: 'Spinner',
         icon: <Circle size={12} />,
-        navLink: '/components/spinners'
+        navLink: '/admin/components/spinners'
       },
       {
         id: 'tabsComponent',
         title: 'Tabs Component',
         icon: <Circle size={12} />,
-        navLink: '/components/tabs-component'
+        navLink: '/admin/components/tabs-component'
       },
       {
         id: 'timeline',
         title: 'Timeline',
         icon: <Circle size={12} />,
-        navLink: '/components/timeline'
+        navLink: '/admin/components/timeline'
       },
       {
         id: 'toasts',
         title: 'Toasts',
         icon: <Circle size={12} />,
-        navLink: '/components/toasts'
+        navLink: '/admin/components/toasts'
       },
       {
         id: 'tooltips',
         title: 'Tooltips',
         icon: <Circle size={12} />,
-        navLink: '/components/tooltips'
+        navLink: '/admin/components/tooltips'
       }
     ]
   },
@@ -227,91 +227,91 @@ export default [
         id: 'sweetAlert',
         title: 'Sweet Alert',
         icon: <Circle size={12} />,
-        navLink: '/extensions/sweet-alert'
+        navLink: '/admin/extensions/sweet-alert'
       },
       {
         id: 'toastr',
         title: 'Toastr',
         icon: <Circle size={12} />,
-        navLink: '/extensions/toastr'
+        navLink: '/admin/extensions/toastr'
       },
       {
         id: 'slider',
         title: 'Sliders',
         icon: <Circle size={12} />,
-        navLink: '/extensions/slider'
+        navLink: '/admin/extensions/slider'
       },
       {
         id: 'drag_&_drop',
         title: 'Drag & Drop',
         icon: <Circle size={12} />,
-        navLink: '/extensions/drag-and-drop'
+        navLink: '/admin/extensions/drag-and-drop'
       },
       {
         id: 'tour',
         title: 'Tour',
         icon: <Circle size={12} />,
-        navLink: '/extensions/tour'
+        navLink: '/admin/extensions/tour'
       },
       {
         id: 'clipBoard',
         title: 'Clipboard',
         icon: <Circle size={12} />,
-        navLink: '/extensions/clipboard'
+        navLink: '/admin/extensions/clipboard'
       },
       {
         id: 'reactPlayer',
         title: 'React Player',
         icon: <Circle size={12} />,
-        navLink: '/extensions/react-player'
+        navLink: '/admin/extensions/react-player'
       },
       {
         id: 'contentMenu',
         title: 'Context Menu',
         icon: <Circle size={12} />,
-        navLink: '/extensions/context-menu'
+        navLink: '/admin/extensions/context-menu'
       },
       {
         id: 'swiper',
         title: 'Swiper',
         icon: <Circle size={12} />,
-        navLink: '/extensions/swiper'
+        navLink: '/admin/extensions/swiper'
       },
       {
         id: 'ratings',
         title: 'Ratings',
         icon: <Circle size={12} />,
-        navLink: '/extensions/ratings'
+        navLink: '/admin/extensions/ratings'
       },
       {
         id: 'i18n',
         title: 'I18n',
         icon: <Circle size={12} />,
-        navLink: '/extensions/i18n'
+        navLink: '/admin/extensions/i18n'
       },
       {
         id: 'extPagination',
         title: 'React Paginate',
         icon: <Circle size={12} />,
-        navLink: '/extensions/pagination'
+        navLink: '/admin/extensions/pagination'
       },
       {
         id: 'extImport',
         title: 'Import',
         icon: <Circle size={12} />,
-        navLink: '/extensions/import'
+        navLink: '/admin/extensions/import'
       },
       {
         id: 'extExport',
         title: 'Export',
         icon: <Circle size={12} />,
-        navLink: '/extensions/export'
+        navLink: '/admin/extensions/export'
       },
       {
         id: 'extExportSelected',
         title: 'Export Selected',
         icon: <Circle size={12} />,
-        navLink: '/extensions/export-selected'
+        navLink: '/admin/extensions/export-selected'
       }
     ]
   },
@@ -324,31 +324,31 @@ export default [
         id: 'collapsedMenu',
         title: 'Collapsed Menu',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/collapse-menu'
+        navLink: '/admin/page-layout/collapse-menu'
       },
       {
         id: 'layoutBoxed',
         title: 'Layout Boxed',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/layout-boxed'
+        navLink: '/admin/page-layout/layout-boxed'
       },
       {
         id: 'withoutMenu',
         title: 'Without Menu',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/without-menu'
+        navLink: '/admin/page-layout/without-menu'
       },
       {
         id: 'layoutEmpty',
         title: 'Layout Empty',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/layout-empty'
+        navLink: '/admin/page-layout/layout-empty'
       },
       {
         id: 'layoutBlank',
         title: 'Layout Blank',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/layout-blank'
+        navLink: '/admin/page-layout/layout-blank'
       }
     ]
   }

@@ -1,4 +1,5 @@
 // ** Routes Imports
+import Shop from './Shop'
 import AppRoutes from './Apps'
 import FormRoutes from './Forms'
 import PagesRoutes from './Pages'
@@ -13,10 +14,11 @@ import PageLayoutsRoutes from './PageLayouts'
 const TemplateTitle = '%s - Vuexy React Admin Template'
 
 // ** Default Route
-const DefaultRoute = '/dashboard/ecommerce'
+const DefaultRoute = '/admin/dashboard/ecommerce'
 
 // ** Merge Routes
 const Routes = [
+  ...Shop,
   ...DashboardRoutes,
   ...AppRoutes,
   ...PagesRoutes,

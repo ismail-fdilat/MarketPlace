@@ -26,56 +26,56 @@ export default [
             id: 'login-v1',
             title: 'Login v1',
             icon: <Circle />,
-            navLink: '/pages/login-v1',
+            navLink: '/admin/pages/login-v1',
             newTab: true
           },
           {
             id: 'login-v2',
             title: 'Login v2',
             icon: <Circle />,
-            navLink: '/pages/login-v2',
+            navLink: '/admin/pages/login-v2',
             newTab: true
           },
           {
             id: 'register-v1',
             title: 'Register v1',
             icon: <Circle />,
-            navLink: '/pages/register-v1',
+            navLink: '/admin/pages/register-v1',
             newTab: true
           },
           {
             id: 'register-v2',
             title: 'Register v2',
             icon: <Circle />,
-            navLink: '/pages/register-v2',
+            navLink: '/admin/pages/register-v2',
             newTab: true
           },
           {
             id: 'forgotPassword-v1',
             title: 'Forgot Password v1',
             icon: <Circle />,
-            navLink: '/pages/forgot-password-v1',
+            navLink: '/admin/pages/forgot-password-v1',
             newTab: true
           },
           {
             id: 'forgotPassword-v2',
             title: 'Forgot Password v2',
             icon: <Circle />,
-            navLink: '/pages/forgot-password-v2',
+            navLink: '/admin/pages/forgot-password-v2',
             newTab: true
           },
           {
             id: 'resetPassword-v1',
             title: 'Reset Password v1',
             icon: <Circle />,
-            navLink: '/pages/reset-password-v1',
+            navLink: '/admin/pages/reset-password-v1',
             newTab: true
           },
           {
             id: 'resetPassword-v2',
             title: 'Reset Password v2',
             icon: <Circle />,
-            navLink: '/pages/reset-password-v2',
+            navLink: '/admin/pages/reset-password-v2',
             newTab: true
           }
         ]
@@ -84,34 +84,34 @@ export default [
         id: 'accountSettings',
         title: 'Account Settings',
         icon: <Settings />,
-        navLink: '/pages/account-settings'
+        navLink: '/admin/pages/account-settings'
       },
       {
         id: 'profile',
         title: 'Profile',
         icon: <User />,
-        navLink: '/pages/profile',
+        navLink: '/admin/pages/profile',
         collapsed: true
       },
       {
         id: 'faq',
         title: 'FAQ',
         icon: <HelpCircle />,
-        navLink: '/pages/faq'
+        navLink: '/admin/pages/faq'
       },
       {
         id: 'knowledgeBase',
         title: 'Knowledge Base',
         icon: <Info />,
-        navLink: '/pages/knowledge-base',
-        parentOf: ['/pages/knowledge-base/category/questions', '/pages/knowledge-base/category']
+        navLink: '/admin/pages/knowledge-base',
+        parentOf: ['/admin/pages/knowledge-base/category/questions', '/admin/pages/knowledge-base/category']
       },
 
       {
         id: 'pricing',
         title: 'Pricing',
         icon: <DollarSign />,
-        navLink: '/pages/pricing'
+        navLink: '/admin/pages/pricing'
       },
 
       {
@@ -123,19 +123,19 @@ export default [
             id: 'blogList',
             title: 'List',
             icon: <Circle />,
-            navLink: '/pages/blog/list'
+            navLink: '/admin/pages/blog/list'
           },
           {
             id: 'blogDetail',
             title: 'Detail',
             icon: <Circle />,
-            navLink: '/pages/blog/detail'
+            navLink: '/admin/pages/blog/detail'
           },
           {
             id: 'blogEdit',
             title: 'Edit',
             icon: <Circle />,
-            navLink: '/pages/blog/edit'
+            navLink: '/admin/pages/blog/edit'
           }
         ]
       },
@@ -193,7 +193,7 @@ export default [
             id: 'comingSoon',
             title: 'Coming Soon',
             icon: <Circle />,
-            navLink: '/misc/coming-soon',
+            navLink: '/admin/misc/coming-soon',
             newTab: true
           },
 
@@ -201,21 +201,21 @@ export default [
             id: 'notAuthorized',
             title: 'Not Authorized',
             icon: <Circle />,
-            navLink: '/misc/not-authorized',
+            navLink: '/admin/misc/not-authorized',
             newTab: true
           },
           {
             id: 'maintenance',
             title: 'Maintenance',
             icon: <Circle />,
-            navLink: '/misc/maintenance',
+            navLink: '/admin/misc/maintenance',
             newTab: true
           },
           {
             id: 'error',
             title: 'Error',
             icon: <Circle />,
-            navLink: '/misc/error',
+            navLink: '/admin/misc/error',
             newTab: true
           }
         ]

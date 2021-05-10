@@ -2,51 +2,51 @@ import { lazy } from 'react'
 
 const UiElementRoutes = [
   {
-    path: '/ui-element/typography',
+    path: '/admin/ui-element/typography',
     component: lazy(() => import('../../views/ui-elements/typography'))
   },
   {
-    path: '/colors/colors',
+    path: '/admin/colors/colors',
     component: lazy(() => import('../../views/ui-elements/colors'))
   },
   {
-    path: '/icons/reactfeather',
+    path: '/admin/icons/reactfeather',
     component: lazy(() => import('../../views/ui-elements/icons'))
   },
   {
-    path: '/cards/basic',
+    path: '/admin/cards/basic',
     component: lazy(() => import('../../views/ui-elements/cards/basic'))
   },
   {
-    path: '/cards/advance',
+    path: '/admin/cards/advance',
     component: lazy(() => import('../../views/ui-elements/cards/advance'))
   },
   {
-    path: '/cards/statistics',
+    path: '/admin/cards/statistics',
     component: lazy(() => import('../../views/ui-elements/cards/statistics'))
   },
   {
-    path: '/cards/analytics',
+    path: '/admin/cards/analytics',
     component: lazy(() => import('../../views/ui-elements/cards/analytics'))
   },
   {
-    path: '/cards/action',
+    path: '/admin/cards/action',
     component: lazy(() => import('../../views/ui-elements/cards/actions'))
   },
   {
-    path: '/components/alerts',
+    path: '/admin/components/alerts',
     component: lazy(() => import('../../views/components/alerts'))
   },
   {
-    path: '/components/auto-complete',
+    path: '/admin/components/auto-complete',
     component: lazy(() => import('../../views/components/autocomplete'))
   },
   {
-    path: '/components/avatar',
+    path: '/admin/components/avatar',
     component: lazy(() => import('../../views/components/avatar'))
   },
   {
-    path: '/components/badges',
+    path: '/admin/components/badges',
     component: lazy(() => import('../../views/components/badge'))
   },
   {
@@ -62,75 +62,75 @@ const UiElementRoutes = [
     component: lazy(() => import('../../views/components/buttons'))
   },
   {
-    path: '/components/carousel',
+    path: '/admin/components/carousel',
     component: lazy(() => import('../../views/components/carousel'))
   },
   {
-    path: '/components/collapse',
+    path: '/admin/components/collapse',
     component: lazy(() => import('../../views/components/collapse'))
   },
   {
-    path: '/components/divider',
+    path: '/admin/components/divider',
     component: lazy(() => import('../../views/components/divider'))
   },
   {
-    path: '/components/dropdowns',
+    path: '/admin/components/dropdowns',
     component: lazy(() => import('../../views/components/dropdowns'))
   },
   {
-    path: '/components/list-group',
+    path: '/admin/components/list-group',
     component: lazy(() => import('../../views/components/listGroup'))
   },
   {
-    path: '/components/media-objects',
+    path: '/admin/components/media-objects',
     component: lazy(() => import('../../views/components/media'))
   },
   {
-    path: '/components/modals',
+    path: '/admin/components/modals',
     component: lazy(() => import('../../views/components/modal'))
   },
   {
-    path: '/components/nav-component',
+    path: '/admin/components/nav-component',
     component: lazy(() => import('../../views/components/navComponent'))
   },
   {
-    path: '/components/pagination',
+    path: '/admin/components/pagination',
     component: lazy(() => import('../../views/components/pagination'))
   },
   {
-    path: '/components/pill-badges',
+    path: '/admin/components/pill-badges',
     component: lazy(() => import('../../views/components/badgePills'))
   },
   {
-    path: '/components/pills-component',
+    path: '/admin/components/pills-component',
     component: lazy(() => import('../../views/components/tabPills'))
   },
   {
-    path: '/components/popovers',
+    path: '/admin/components/popovers',
     component: lazy(() => import('../../views/components/popovers'))
   },
   {
-    path: '/components/progress',
+    path: '/admin/components/progress',
     component: lazy(() => import('../../views/components/progress'))
   },
   {
-    path: '/components/spinners',
+    path: '/admin/components/spinners',
     component: lazy(() => import('../../views/components/spinners'))
   },
   {
-    path: '/components/tabs-component',
+    path: '/admin/components/tabs-component',
     component: lazy(() => import('../../views/components/tabs'))
   },
   {
-    path: '/components/timeline',
+    path: '/admin/components/timeline',
     component: lazy(() => import('../../views/components/timeline'))
   },
   {
-    path: '/components/toasts',
+    path: '/admin/components/toasts',
     component: lazy(() => import('../../views/components/toasts'))
   },
   {
-    path: '/components/tooltips',
+    path: '/admin/components/tooltips',
     component: lazy(() => import('../../views/components/tooltips'))
   }
 ]

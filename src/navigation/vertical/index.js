@@ -1,4 +1,5 @@
 // ** Navigation sections imports
+import shop from './shop'
 import apps from './apps'
 import pages from './pages'
 import forms from './forms'
@@ -9,4 +10,4 @@ import uiElements from './ui-elements'
 import chartsAndMaps from './charts-maps'
 
 // ** Merge & Export
-export default [...dashboards, ...apps, ...pages, ...uiElements, ...forms, ...tables, ...chartsAndMaps, ...others]
+export default [...shop, ...dashboards, ...apps, ...pages, ...uiElements, ...forms, ...tables, ...chartsAndMaps, ...others]

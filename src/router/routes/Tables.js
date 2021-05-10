@@ -2,15 +2,15 @@ import { lazy } from 'react'
 
 const TablesRoutes = [
   {
-    path: '/tables/reactstrap',
+    path: '/admin/tables/reactstrap',
     component: lazy(() => import('../../views/tables/reactstrap'))
   },
   {
-    path: '/datatables/basic',
+    path: '/admin/datatables/basic',
     component: lazy(() => import('../../views/tables/data-tables/basic'))
   },
   {
-    path: '/datatables/advance',
+    path: '/admin/datatables/advance',
     component: lazy(() => import('../../views/tables/data-tables/advance'))
   }
 ]

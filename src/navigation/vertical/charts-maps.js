@@ -14,19 +14,19 @@ export default [
         id: 'apex',
         title: 'Apex',
         icon: <Circle size={12} />,
-        navLink: '/charts/apex'
+        navLink: '/admin/charts/apex'
       },
       {
         id: 'chartJs',
         title: 'ChartJS',
         icon: <Circle size={12} />,
-        navLink: '/charts/chartjs'
+        navLink: '/admin/charts/chartjs'
       },
       {
         id: 'recharts',
         title: 'Recharts',
         icon: <Circle size={12} />,
-        navLink: '/charts/recharts'
+        navLink: '/admin/charts/recharts'
       }
     ]
   },
