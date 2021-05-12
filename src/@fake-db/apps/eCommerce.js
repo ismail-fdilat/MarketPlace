@@ -367,7 +367,7 @@ const data = {
 // ------------------------------------------------
 // GET: Return products
 // ------------------------------------------------
-mock.onGet('/apps/ecommerce/products').reply(config => {
+mock.onGet('/shop/products').reply(config => {
   // eslint-disable-next-line object-curly-newline
   const { q = '', sortBy = 'featured', perPage = 9, page = 1 } = config.params
 
@@ -440,7 +440,7 @@ mock.onGet(/\/apps\/ecommerce\/products\/\d+/).reply(config => {
 // ------------------------------------------------
 // GET: Return Wishlist Products
 // ------------------------------------------------
-mock.onGet('/apps/ecommerce/wishlist').reply(() => {
+mock.onGet('/shop/wishlist').reply(() => {
   const products = data.userWishlist.map(wishlistProduct => {
     const product = data.products.find(p => p.id === wishlistProduct.productId)
     product.isInCart = data.userCart.findIndex(p => p.productId === wishlistProduct.productId) > -1
@@ -453,7 +453,7 @@ mock.onGet('/apps/ecommerce/wishlist').reply(() => {
 // ------------------------------------------------
 // GET: Return Cart Products
 // ------------------------------------------------
-mock.onGet('/apps/ecommerce/cart').reply(() => {
+mock.onGet('/shop/cart').reply(() => {
   const products = data.userCart.map(cartProduct => {
     const product = data.products.find(p => p.id === cartProduct.productId)
 
@@ -473,7 +473,7 @@ mock.onGet('/apps/ecommerce/cart').reply(() => {
 // ------------------------------------------------
 // POST: Add Item in user Cart
 // ------------------------------------------------
-mock.onPost('/apps/ecommerce/cart').reply(config => {
+mock.onPost('/shop/cart').reply(config => {
   // Get product from post data
   const { productId } = JSON.parse(config.data)
 
@@ -509,7 +509,7 @@ mock.onDelete(/\/apps\/ecommerce\/cart\/\d+/).reply(config => {
 // ------------------------------------------------
 // POST: Add Item in user Wishlist
 // ------------------------------------------------
-mock.onPost('/apps/ecommerce/wishlist').reply(config => {
+mock.onPost('/shop/wishlist').reply(config => {
   // Get product from post data
   const { productId } = JSON.parse(config.data)
 

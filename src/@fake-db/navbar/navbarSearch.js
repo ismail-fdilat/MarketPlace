@@ -91,7 +91,7 @@ export const searchArr = [
         isBookmarked: false,
         title: 'Shop Ecommerce',
         icon: 'ShoppingCart',
-        link: '/apps/ecommerce/shop'
+        link: '/shop/shop'
       },
       {
         id: 12,
@@ -99,7 +99,7 @@ export const searchArr = [
         isBookmarked: false,
         title: 'Product Detail',
         icon: 'Circle',
-        link: '/apps/ecommerce/product-detail'
+        link: '/shop/product-detail'
       },
       {
         id: 13,
@@ -107,7 +107,7 @@ export const searchArr = [
         isBookmarked: false,
         title: 'Wish List',
         icon: 'Heart',
-        link: '/apps/ecommerce/wishlist'
+        link: '/shop/wishlist'
       },
       {
         id: 14,
@@ -115,7 +115,7 @@ export const searchArr = [
         isBookmarked: false,
         title: 'Checkout',
         icon: 'CreditCard',
-        link: '/apps/ecommerce/checkout'
+        link: '/shop/checkout'
       },
       {
         id: 15,

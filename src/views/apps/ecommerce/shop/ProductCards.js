@@ -48,7 +48,7 @@ const ProductCards = props => {
         return (
           <Card className='ecommerce-card' key={item.name}>
             <div className='item-img text-center mx-auto'>
-              <Link to={`/apps/ecommerce/product-detail/${item.slug}`}>
+              <Link to={`/shop/product-detail/${item.slug}`}>
                 <img className='img-fluid card-img-top' src={item.image} alt={item.name} />
               </Link>
             </div>
@@ -75,7 +75,7 @@ const ProductCards = props => {
                 </div>
               </div>
               <h6 className='item-name'>
-                <Link className='text-body' to={`/apps/ecommerce/product-detail/${item.slug}`}>
+                <Link className='text-body' to={`/shop/product-detail/${item.slug}`}>
                   {item.name}
                 </Link>
                 <CardText tag='span' className='item-company'>
@@ -119,7 +119,7 @@ const ProductCards = props => {
                 /*eslint-disable */
                 {...(item.isInCart
                   ? {
-                      to: '/apps/ecommerce/checkout'
+                      to: '/shop/checkout'
                     }
                   : {})}
                 /*eslint-enable */

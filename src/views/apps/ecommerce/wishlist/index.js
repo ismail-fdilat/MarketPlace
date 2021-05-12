@@ -42,7 +42,7 @@ const Wishlist = () => {
       return (
         <Card className='ecommerce-card' key={item.name}>
           <div className='item-img text-center mx-auto'>
-            <Link to={`/apps/ecommerce/product-detail/${item.slug}`}>
+            <Link to={`/shop/product-detail/${item.slug}`}>
               <img className='img-fluid' src={item.image} alt={item.name} />
             </Link>
           </div>
@@ -69,7 +69,7 @@ const Wishlist = () => {
               </div>
             </div>
             <div className='item-name'>
-              <Link to={`/apps/ecommerce/product/${item.slug}`}>{item.name}</Link>
+              <Link to={`/shop/product/${item.slug}`}>{item.name}</Link>
             </div>
             <CardText className='item-description'>{item.description}</CardText>
           </CardBody>
@@ -92,7 +92,7 @@ const Wishlist = () => {
               /*eslint-disable */
               {...(item.isInCart
                 ? {
-                    to: '/apps/ecommerce/checkout'
+                    to: '/shop/checkout'
                   }
                 : {})}
               /*eslint-enable */

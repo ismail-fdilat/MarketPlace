@@ -1,18 +1,19 @@
 module.exports = {
-  env: {
-    node: true,
-    es6: true,
-    browser: true
-  },
-
+  parser: "babel-eslint",
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
+    allowImportExportEverywhere: true,
     ecmaFeatures: {
       jsx: true,
       modules: true,
       experimentalObjectRestSpread: true
     }
+  },
+  env: {
+    node: true,
+    es6: true,
+    browser: true
   },
   rules: {
     'no-console': 'off',
@@ -36,7 +37,7 @@ module.exports = {
     'brace-style': ['error', '1tbs', { allowSingleLine: true }],
     'block-spacing': 'error',
     'comma-dangle': 'error',
-    'comma-spacing': 'error',
+    // 'comma-spacing': 'error',
     'comma-style': 'error',
     'computed-property-spacing': 'error',
     'func-call-spacing': 'error',
@@ -54,7 +55,7 @@ module.exports = {
     'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
     'quote-props': ['error', 'as-needed'],
     // quotes: ['error', 'prefer-single'],
-    semi: ['error', 'never'],
+    // semi: ['error', 'never'],
     'semi-spacing': 'error',
     'space-before-blocks': 'error',
     // 'space-before-function-paren': 'error',
