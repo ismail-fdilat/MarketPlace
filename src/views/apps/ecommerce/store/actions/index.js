@@ -3,7 +3,7 @@ import axios from 'axios'
 // ** GET Products
 export const getProducts = params => {
   return dispatch => {
-    return axios.get('/apps/ecommerce/products', { params }).then(res => {
+    return axios.get('/shop/products', { params }).then(res => {
       dispatch({ type: 'GET_PRODUCTS', data: res.data, params })
     })
   }
@@ -12,7 +12,7 @@ export const getProducts = params => {
 // ** Add Item to Cart
 export const addToCart = id => {
   return (dispatch, getState) => {
-    return axios.post('/apps/ecommerce/cart', { productId: id }).then(res => {
+    return axios.post('/shop/cart', { productId: id }).then(res => {
       dispatch({ type: 'ADD_TO_CART', data: res.data })
       dispatch(getProducts(getState().ecommerce.params))
     })
@@ -22,7 +22,7 @@ export const addToCart = id => {
 // ** GET Wishlist Items
 export const getWishlistItems = () => {
   return dispatch => {
-    return axios.get('/apps/ecommerce/wishlist').then(res => {
+    return axios.get('/shop/wishlist').then(res => {
       dispatch({ type: 'GET_WISHLIST', data: res.data })
     })
   }
@@ -31,7 +31,7 @@ export const getWishlistItems = () => {
 // ** DELETE Wishlist Item
 export const deleteWishlistItem = id => {
   return dispatch => {
-    return axios.delete(`/apps/ecommerce/wishlist/${id}`).then(res => {
+    return axios.delete(`/shop/wishlist/${id}`).then(res => {
       dispatch({ type: 'DELETE_WISHLIST_ITEM', data: res.data })
       dispatch(getWishlistItems())
     })
@@ -41,7 +41,7 @@ export const deleteWishlistItem = id => {
 // ** GET Cart Items
 export const getCartItems = () => {
   return dispatch => {
-    return axios.get('/apps/ecommerce/cart').then(res => {
+    return axios.get('/shop/cart').then(res => {
       dispatch({ type: 'GET_CART', data: res.data })
     })
   }

@@ -20,6 +20,11 @@ const AppRoutes = [
     }
   },
   {
+    path: '/apps/grapesjs',
+    exact: true,
+    component : lazy(() => import('../../views/apps/grapesjs'))
+  },
+  {
     path: '/apps/email/label/:label',
     exact: true,
     appLayout: true,
@@ -108,36 +113,6 @@ const AppRoutes = [
     path: '/apps/invoice/print',
     layout: 'BlankLayout',
     component: lazy(() => import('../../views/apps/invoice/print'))
-  },
-  {
-    path: '/apps/ecommerce/shop',
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/shop'))
-  },
-  {
-    path: '/apps/ecommerce/wishlist',
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/wishlist'))
-  },
-  {
-    path: '/apps/ecommerce/product-detail',
-    exact: true,
-    className: 'ecommerce-application',
-    component: () => <Redirect to='/apps/ecommerce/product-detail/apple-i-phone-11-64-gb-black-26' />
-  },
-  {
-    path: '/apps/ecommerce/product-detail/:product',
-    exact: true,
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/detail')),
-    meta: {
-      navLink: '/apps/ecommerce/product-detail'
-    }
-  },
-  {
-    path: '/apps/ecommerce/checkout',
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/checkout'))
   },
   {
     path: '/apps/user/list',

@@ -38,6 +38,9 @@ import './@core/assets/fonts/feather/iconfont.css'
 import './@core/scss/core.scss'
 import './assets/scss/style.scss'
 
+// ** grapes styles
+import 'grapesjs/dist/css/grapes.min.css'
+
 // ** Service Worker
 import * as serviceWorker from './serviceWorker'
 

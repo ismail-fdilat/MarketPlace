@@ -31,6 +31,8 @@
     "draftjs-to-html": "0.9.1",
     "file-saver": "2.0.2",
     "flatpickr": "4.6.3",
+    "grapesjs": "^0.17.3",
+    "grapesjs-preset-webpage": "^0.1.11",
     "history": "5.0.0",
     "html-to-draftjs": "1.5.0",
     "intl-messageformat": "7.8.4",
