@@ -126,7 +126,7 @@ const Product = props => {
             /*eslint-disable */
             {...(data.isInCart
               ? {
-                  to: '/apps/ecommerce/checkout'
+                  to: '/shop/checkout'
                 }
               : {})}
             /*eslint-enable */

@@ -20,7 +20,12 @@ const AppRoutes = [
     }
   },
   {
-    path: '/admin/apps/email/label/:label',
+    path: '/apps/grapesjs',
+    exact: true,
+    component : lazy(() => import('../../views/apps/grapesjs'))
+  },
+  {
+    path: '/apps/email/label/:label',
     exact: true,
     appLayout: true,
     className: 'email-application',

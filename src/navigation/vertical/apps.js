@@ -1,8 +1,14 @@
-import { Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User } from 'react-feather'
+import { Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User, Sidebar } from 'react-feather'
 
 export default [
   {
     header: 'Apps & Pages'
+  },
+  {
+    id: "grapesjs",
+    title: "GrapesJs",
+    icon: <Sidebar size={20} />,
+    navLink : '/apps/grapesjs'
   },
   {
     id: 'email',
@@ -68,25 +74,25 @@ export default [
         id: 'shop',
         title: 'Shop',
         icon: <Circle size={12} />,
-        navLink: '/admin/apps/ecommerce/shop'
+        navLink: '/shop'
       },
       {
         id: 'detail',
         title: 'Details',
         icon: <Circle size={12} />,
-        navLink: '/admin/apps/ecommerce/product-detail'
+        navLink: '/shop/product-detail'
       },
       {
         id: 'wishList',
         title: 'Wish List',
         icon: <Circle size={12} />,
-        navLink: '/admin/apps/ecommerce/wishlist'
+        navLink: '/shop/wishlist'
       },
       {
         id: 'checkout',
         title: 'Checkout',
         icon: <Circle size={12} />,
-        navLink: '/admin/apps/ecommerce/checkout'
+        navLink: '/shop/checkout'
       }
     ]
   },

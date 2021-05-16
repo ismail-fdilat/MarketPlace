@@ -3,12 +3,12 @@
 //Template config options
 const themeConfig = {
   app: {
-    appName: 'Vuexy',
-    appLogoImage: require('@src/assets/images/logo/logo.svg').default
+    appName: 'MarketPLace',
+    appLogoImage: require('@src/assets/images/logo/logo.png').default
   },
   layout: {
     isRTL: false,
-    skin: 'light', // light, dark, bordered, semi-dark
+    skin: 'bordered', // light, dark, bordered, semi-dark
     routerTransition: 'fadeIn', // fadeIn, fadeInLeft, zoomIn, none or check this for more transition https://animate.style/
     type: 'vertical', // vertical, horizontal
     contentWidth: 'full', // full, boxed

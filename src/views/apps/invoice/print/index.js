@@ -9,7 +9,7 @@ import '@styles/base/pages/app-invoice-print.scss'
 
 const Print = () => {
   // ** Print on mount
-  useEffect(() => window.print(), [])
+  // useEffect(() => window.print(), [])
 
   return (
     <div className='invoice-print p-3'>

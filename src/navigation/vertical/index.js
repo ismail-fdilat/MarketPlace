@@ -8,6 +8,6 @@ import others from './others'
 import dashboards from './dashboards'
 import uiElements from './ui-elements'
 import chartsAndMaps from './charts-maps'
+import stockManagement from './stock-management'
 
-// ** Merge & Export
-export default [...shop, ...dashboards, ...apps, ...pages, ...uiElements, ...forms, ...tables, ...chartsAndMaps, ...others]
+export default [...shop, ...dashboards, ...stockManagement, ...apps, ...pages, ...uiElements, ...forms, ...tables, ...chartsAndMaps, ...others]

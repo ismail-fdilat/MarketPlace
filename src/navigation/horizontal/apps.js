@@ -70,25 +70,25 @@ export default [
             id: 'shop',
             title: 'Shop',
             icon: <Circle />,
-            navLink: '/admin/apps/ecommerce/shop'
+            navLink: '/shop/shop'
           },
           {
             id: 'detail',
             title: 'Details',
             icon: <Circle />,
-            navLink: '/admin/apps/ecommerce/product-detail'
+            navLink: '/shop/product-detail'
           },
           {
             id: 'wishList',
             title: 'Wish List',
             icon: <Circle />,
-            navLink: '/admin/apps/ecommerce/wishlist'
+            navLink: '/shop/wishlist'
           },
           {
             id: 'checkout',
             title: 'Checkout',
             icon: <Circle />,
-            navLink: '/admin/apps/ecommerce/checkout'
+            navLink: '/shop/checkout'
           }
         ]
       },

@@ -128,7 +128,7 @@ const UserAccountTab = ({ selectedUser }) => {
                 </Input>
               </FormGroup>
             </Col>
-            <Col md='4' sm='12'>
+            {/* <Col md='4' sm='12'>
               <FormGroup>
                 <Label for='role'>Role</Label>
                 <Input type='select' name='role' id='role' defaultValue={userData && userData.role}>
@@ -139,7 +139,7 @@ const UserAccountTab = ({ selectedUser }) => {
                   <option value='subscriber'>Subscriber</option>
                 </Input>
               </FormGroup>
-            </Col>
+            </Col> */}
             <Col md='4' sm='12'>
               <FormGroup>
                 <Label for='company'>Company</Label>
@@ -151,7 +151,7 @@ const UserAccountTab = ({ selectedUser }) => {
                 />
               </FormGroup>
             </Col>
-            <Col sm='12'>
+            {/* <Col sm='12'>
               <div className='permissions border mt-1'>
                 <h6 className='py-1 mx-1 mb-0 font-medium-2'>
                   <Lock size={18} className='mr-25' />
@@ -254,7 +254,7 @@ const UserAccountTab = ({ selectedUser }) => {
               <Button.Ripple color='secondary' outline>
                 Reset
               </Button.Ripple>
-            </Col>
+            </Col> */}
           </Row>
         </Form>
       </Col>
