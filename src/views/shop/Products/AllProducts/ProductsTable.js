@@ -39,6 +39,7 @@ const ProductsTable = () => {
   
   // ** Function to handle Modal toggle
   const handleModal = () => setModal(!modal)
+  const RefrechComp = () => location.reload(false)
 
   // ** Function to handle filter
   const handleFilter = e => {

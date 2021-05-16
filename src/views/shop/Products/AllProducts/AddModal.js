@@ -90,6 +90,7 @@ const AddModal = ({ open, handleModal, shop }) => {
             }
           }).then((res) => {
             console.log(res.data)
+            location.reload(false)
             handleModal()
           })
         }
