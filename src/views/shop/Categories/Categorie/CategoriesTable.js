@@ -19,9 +19,8 @@ import {
   Col
 } from 'reactstrap'
 
-const shop = 8
 
-const ProductsTable = () => {
+const ProductsTable = (props) => {
   // ** States
   const [modal, setModal] = useState(false)
   const [currentPage, setCurrentPage] = useState(0)
@@ -29,11 +28,9 @@ const ProductsTable = () => {
   const [filteredData, setFilteredData] = useState([])
   const [data, setData] = useState([])
 
-
   useEffect(() => {
-    Axios.get(`${Api.link}/api/shop/${shop}/products`).then(response => {
-      setData(response.data.data)
-      console.log(response.data.data)
+    Axios.get(`${Api.link}/shop/4/category/${props.Catid}`).then(response => {
+      setData(response.data.category.children)
     })
   }, [])
   
@@ -134,7 +131,7 @@ const ProductsTable = () => {
           data={searchValue.length ? filteredData : data}
         />
       </Card>
-      <AddModal open={modal} shop={shop} handleModal={handleModal} />
+      <AddModal  open={modal} handleModal={handleModal} />
       </>
   )
 }

@@ -1,8 +1,9 @@
 // ** Custom Components
 import Avatar from '@components/avatar'
-
+import { useEffect, useState } from 'react'
 // ** Third Party Components
 import Axios from 'axios'
+import Api from '@src/api.json'
 import { MoreVertical, Edit, FileText, Archive, Trash } from 'react-feather'
 import { Badge, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 // ** Vars
@@ -15,26 +16,58 @@ const status = {
   4: { title: 'Resigned', color: 'light-warning' },
   5: { title: 'Applied', color: 'light-info' }
 }
-
 // ** Table Common Column
+         
 export const columns = [
   {
-    name: 'Name',
-    selector: 'name',
-    sortable: true,
-    minWidth: '250px'
+    name: 'Product',
+    minWidth: '150px',
+    cell: row => (
+      <div className='d-flex align-items-center'>
+        <Avatar img={(row.href.images.length > 0) ? `${Api.link}/${row.href.images[0].images}` : ""}/>
+        <div className='user-info text-truncate ml-1'>
+          <span className='d-block font-weight-bold text-truncate'>{row.name}</span>
+          <small>#{row.id}</small>
+        </div>
+      </div>
+    )
   },
   {
-    name: 'Slug',
-    selector: 'slug',
+    name: 'Stock',
+    selector: 'stock',
     sortable: true,
     minWidth: '150px'
   },
   {
-    name: 'Order',
-    selector: 'order',
+    name: 'Stock Min',
+    selector: 'min_stock',
     sortable: true,
     minWidth: '150px'
+  },
+  {
+    name: 'Solde Price',
+    sortable: true,
+    minWidth: '150px',
+    cell: row => (
+      `${row.TotalPrice} $`
+    )
+  },
+  {
+    name: 'Original Price',
+    sortable: true,
+    minWidth: '150px',
+    cell: row => (
+      `${row.price} $`
+    )
+  },
+  {
+    name: 'Status',
+    sortable: true,
+    minWidth: '150px',
+    cell: row => {
+      
+      return (row.status) ?  (<Badge color={'light-success'} pill> Actif</Badge>) : (<Badge color={'light-danger'} pill>  inactif</Badge>)
+      
+    }
   }
-
 ]

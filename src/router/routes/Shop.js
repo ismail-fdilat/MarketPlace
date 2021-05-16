@@ -10,6 +10,10 @@ const Shop = [
     component: lazy(() => import('../../views/charts/apex'))
   },
   {
+    path: '/admin/categories/:id',
+    component: lazy(() => import('../../views/shop/Categories/Categorie'))
+  },
+  {
     path: '/admin/categories',
     component: lazy(() => import('../../views/shop/Categories/AllCategories'))
   }

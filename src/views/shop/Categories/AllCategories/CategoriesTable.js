@@ -4,6 +4,8 @@ import Axios from 'axios'
 // ** Table Data & Columns
 import { columns } from '../data'
 import AddModal from './AddModal'
+import Api from '@src/api.json'
+
 
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
@@ -30,9 +32,9 @@ const ProductsTable = () => {
 
 
   useEffect(() => {
-    Axios.get('https://c7f8ff2f2cd9.ngrok.io/api/Shop/4/Category').then(response => {
+    Axios.get(`${Api.link}/api/shop/4/category`).then(response => {
       setData(response.data)
-      console.log(data)
+      console.log(response.data)
     })
   }, [])
   
