@@ -3,11 +3,11 @@ import { lazy } from 'react'
 const DashboardRoutes = [
   // Dashboards
   {
-    path: '/dashboard/analytics',
+    path: '/admin/dashboard/analytics',
     component: lazy(() => import('../../views/dashboard/analytics'))
   },
   {
-    path: '/dashboard/ecommerce',
+    path: '/admin/dashboard/ecommerce',
     component: lazy(() => import('../../views/dashboard/ecommerce')),
     exact: true
   }

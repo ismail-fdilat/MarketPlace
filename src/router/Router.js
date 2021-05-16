@@ -10,7 +10,7 @@ import { useRouterTransition } from '@hooks/useRouterTransition'
 // ** Custom Components
 // import Spinner from '@components/spinner/Loading-spinner' // Uncomment if your require content fallback
 import LayoutWrapper from '@layouts/components/layout-wrapper'
-
+import Home from '@src/views/Home'
 // ** Router Components
 import { BrowserRouter as AppRouter, Route, Switch, Redirect } from 'react-router-dom'
 
@@ -85,7 +85,6 @@ const Router = () => {
        ** If user is not Logged in & route.meta.authRoute, !route.meta.publicRoute are undefined
        ** Then redirect user to login
        */
-
       return <Redirect to='/login' />
     } else if (route.meta && route.meta.authRoute && isUserLoggedIn()) {
       // ** If route has meta and authRole and user is Logged in then redirect user to home page (DefaultRoute)
@@ -186,10 +185,17 @@ const Router = () => {
   return (
     <AppRouter basename={process.env.REACT_APP_BASENAME}>
       <Switch>
+        {/* root link */}
+        <Route
+        exact
+        path='/'
+        >
+          <Home/>
+        </Route>
         {/* If user is logged in Redirect user to DefaultRoute else to login */}
         <Route
           exact
-          path='/'
+          path='/admin'
           render={() => {
             return isUserLoggedIn() ? <Redirect to={DefaultRoute} /> : <Redirect to='/login' />
           }}

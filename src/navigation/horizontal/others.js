@@ -11,7 +11,7 @@ export default [
         icon: <Shield size={20} />,
         action: 'read',
         resource: 'ACL',
-        navLink: '/access-control'
+        navLink: '/admin/access-control'
       },
       {
         id: 'menuLevels',

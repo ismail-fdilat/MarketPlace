@@ -2,19 +2,19 @@ import { lazy } from 'react'
 
 const ChartMapsRoutes = [
   {
-    path: '/charts/apex',
+    path: '/admin/charts/apex',
     component: lazy(() => import('../../views/charts/apex'))
   },
   {
-    path: '/charts/chartjs',
+    path: '/admin/charts/chartjs',
     component: lazy(() => import('../../views/charts/chart-js'))
   },
   {
-    path: '/charts/recharts',
+    path: '/admin/charts/recharts',
     component: lazy(() => import('../../views/charts/recharts'))
   },
   {
-    path: '/maps/leaflet',
+    path: '/admin/maps/leaflet',
     component: lazy(() => import('../../views/maps'))
   }
 ]

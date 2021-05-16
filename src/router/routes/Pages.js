@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom'
 
 const PagesRoutes = [
   {
-    path: '/login',
+    path: '/admin/login',
     component: lazy(() => import('../../views/pages/authentication/Login')),
     layout: 'BlankLayout',
     meta: {
@@ -11,17 +11,17 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/login-v1',
+    path: '/admin/pages/login-v1',
     component: lazy(() => import('../../views/pages/authentication/LoginV1')),
     layout: 'BlankLayout'
   },
   {
-    path: '/pages/login-v2',
+    path: '/admin/pages/login-v2',
     component: lazy(() => import('../../views/pages/authentication/LoginV2')),
     layout: 'BlankLayout'
   },
   {
-    path: '/register',
+    path: '/admin/register',
     component: lazy(() => import('../../views/pages/authentication/Register')),
     layout: 'BlankLayout',
     meta: {
@@ -29,17 +29,17 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/register-v1',
+    path: '/admin/pages/register-v1',
     component: lazy(() => import('../../views/pages/authentication/RegisterV1')),
     layout: 'BlankLayout'
   },
   {
-    path: '/pages/register-v2',
+    path: '/admin/pages/register-v2',
     component: lazy(() => import('../../views/pages/authentication/RegisterV2')),
     layout: 'BlankLayout'
   },
   {
-    path: '/forgot-password',
+    path: '/admin/forgot-password',
     component: lazy(() => import('../../views/pages/authentication/ForgotPassword')),
     layout: 'BlankLayout',
     meta: {
@@ -47,40 +47,40 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/forgot-password-v1',
+    path: '/admin/pages/forgot-password-v1',
     component: lazy(() => import('../../views/pages/authentication/ForgotPasswordV1')),
     layout: 'BlankLayout'
   },
   {
-    path: '/pages/forgot-password-v2',
+    path: '/admin/pages/forgot-password-v2',
     component: lazy(() => import('../../views/pages/authentication/ForgotPasswordV2.js')),
     layout: 'BlankLayout'
   },
   {
-    path: '/pages/reset-password-v1',
+    path: '/admin/pages/reset-password-v1',
     component: lazy(() => import('../../views/pages/authentication/ResetPasswordV1')),
     layout: 'BlankLayout'
   },
   {
-    path: '/pages/reset-password-v2',
+    path: '/admin/pages/reset-password-v2',
     component: lazy(() => import('../../views/pages/authentication/ResetPasswordV2')),
     layout: 'BlankLayout'
   },
   {
-    path: '/pages/profile',
+    path: '/admin/pages/profile',
     component: lazy(() => import('../../views/pages/profile'))
   },
   {
-    path: '/pages/faq',
+    path: '/admin/pages/faq',
     component: lazy(() => import('../../views/pages/faq'))
   },
   {
-    path: '/pages/knowledge-base',
+    path: '/admin/pages/knowledge-base',
     exact: true,
     component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBase'))
   },
   {
-    path: '/pages/knowledge-base/:category',
+    path: '/admin/pages/knowledge-base/:category',
     exact: true,
     component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBaseCategory')),
     meta: {
@@ -88,23 +88,23 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/knowledge-base/:category/:question',
+    path: '/admin/pages/knowledge-base/:category/:question',
     component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBaseCategoryQuestion')),
     meta: {
       navLink: '/pages/knowledge-base'
     }
   },
   {
-    path: '/pages/account-settings',
+    path: '/admin/pages/account-settings',
     component: lazy(() => import('../../views/pages/account-settings'))
   },
   {
-    path: '/pages/blog/list',
+    path: '/admin/pages/blog/list',
     exact: true,
     component: lazy(() => import('../../views/pages/blog/list'))
   },
   {
-    path: '/pages/blog/detail/:id',
+    path: '/admin/pages/blog/detail/:id',
     exact: true,
     component: lazy(() => import('../../views/pages/blog/details')),
     meta: {
@@ -112,12 +112,12 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/blog/detail',
+    path: '/admin/pages/blog/detail',
     exact: true,
     component: () => <Redirect to='/pages/blog/detail/1' />
   },
   {
-    path: '/pages/blog/edit/:id',
+    path: '/admin/pages/blog/edit/:id',
     exact: true,
     component: lazy(() => import('../../views/pages/blog/edit')),
     meta: {
@@ -125,16 +125,16 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/blog/edit',
+    path: '/admin/pages/blog/edit',
     exact: true,
     component: () => <Redirect to='/pages/blog/edit/1' />
   },
   {
-    path: '/pages/pricing',
+    path: '/admin/pages/pricing',
     component: lazy(() => import('../../views/pages/pricing'))
   },
   {
-    path: '/misc/coming-soon',
+    path: '/admin/misc/coming-soon',
     component: lazy(() => import('../../views/pages/misc/ComingSoon')),
     layout: 'BlankLayout',
     meta: {
@@ -142,7 +142,7 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/misc/not-authorized',
+    path: '/admin/misc/not-authorized',
     component: lazy(() => import('../../views/pages/misc/NotAuthorized')),
     layout: 'BlankLayout',
     meta: {
@@ -150,7 +150,7 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/misc/maintenance',
+    path: '/admin/misc/maintenance',
     component: lazy(() => import('../../views/pages/misc/Maintenance')),
     layout: 'BlankLayout',
     meta: {
@@ -158,7 +158,7 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/misc/error',
+    path: '/admin/misc/error',
     component: lazy(() => import('../../views/pages/misc/Error')),
     layout: 'BlankLayout',
     meta: {

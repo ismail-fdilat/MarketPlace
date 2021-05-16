@@ -14,25 +14,25 @@ export default [
     id: 'email',
     title: 'Email',
     icon: <Mail size={20} />,
-    navLink: '/apps/email'
+    navLink: '/admin/apps/email'
   },
   {
     id: 'chat',
     title: 'Chat',
     icon: <MessageSquare size={20} />,
-    navLink: '/apps/chat'
+    navLink: '/admin/apps/chat'
   },
   {
     id: 'todo',
     title: 'Todo',
     icon: <CheckSquare size={20} />,
-    navLink: '/apps/todo'
+    navLink: '/admin/apps/todo'
   },
   {
     id: 'calendar',
     title: 'Calendar',
     icon: <Calendar size={20} />,
-    navLink: '/apps/calendar'
+    navLink: '/admin/apps/calendar'
   },
   {
     id: 'invoiceApp',
@@ -43,25 +43,25 @@ export default [
         id: 'invoiceList',
         title: 'List',
         icon: <Circle size={12} />,
-        navLink: '/apps/invoice/list'
+        navLink: '/admin/apps/invoice/list'
       },
       {
         id: 'invoicePreview',
         title: 'Preview',
         icon: <Circle size={12} />,
-        navLink: '/apps/invoice/preview'
+        navLink: '/admin/apps/invoice/preview'
       },
       {
         id: 'invoiceEdit',
         title: 'Edit',
         icon: <Circle size={12} />,
-        navLink: '/apps/invoice/edit'
+        navLink: '/admin/apps/invoice/edit'
       },
       {
         id: 'invoiceAdd',
         title: 'Add',
         icon: <Circle size={12} />,
-        navLink: '/apps/invoice/add'
+        navLink: '/admin/apps/invoice/add'
       }
     ]
   },
@@ -105,19 +105,19 @@ export default [
         id: 'list',
         title: 'List',
         icon: <Circle size={12} />,
-        navLink: '/apps/user/list'
+        navLink: '/admin/apps/user/list'
       },
       {
         id: 'view',
         title: 'View',
         icon: <Circle size={12} />,
-        navLink: '/apps/user/view'
+        navLink: '/admin/apps/user/view'
       },
       {
         id: 'edit',
         title: 'Edit',
         icon: <Circle size={12} />,
-        navLink: '/apps/user/edit'
+        navLink: '/admin/apps/user/edit'
       }
     ]
   }
