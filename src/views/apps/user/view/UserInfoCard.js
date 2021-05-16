@@ -71,7 +71,6 @@ const UserInfoCard = ({ selectedUser }) => {
                 </div>
                 <div className='ml-1'>
                   <h5 className='mb-0'>23.3k</h5>
-                  <small>Monthly Sales</small>
                 </div>
               </div>
               <div className='d-flex align-items-center'>
@@ -80,7 +79,6 @@ const UserInfoCard = ({ selectedUser }) => {
                 </div>
                 <div className='ml-1'>
                   <h5 className='mb-0'>$99.87K</h5>
-                  <small>Annual Profit</small>
                 </div>
               </div>
             </div>
@@ -109,7 +107,7 @@ const UserInfoCard = ({ selectedUser }) => {
                   {selectedUser !== null ? selectedUser.status : 'Active'}
                 </CardText>
               </div>
-              <div className='d-flex flex-wrap align-items-center my-50'>
+              {/* <div className='d-flex flex-wrap align-items-center my-50'>
                 <div className='user-info-title'>
                   <Star className='mr-1' size={14} />
                   <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
@@ -119,7 +117,7 @@ const UserInfoCard = ({ selectedUser }) => {
                 <CardText className='text-capitalize mb-0'>
                   {selectedUser !== null ? selectedUser.role : 'Admin'}
                 </CardText>
-              </div>
+              </div> */}
               <div className='d-flex flex-wrap align-items-center my-50'>
                 <div className='user-info-title'>
                   <Flag className='mr-1' size={14} />

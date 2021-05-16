@@ -74,7 +74,7 @@ export default [
         id: 'shop',
         title: 'Shop',
         icon: <Circle size={12} />,
-        navLink: '/shop/shop'
+        navLink: '/shop'
       },
       {
         id: 'detail',
